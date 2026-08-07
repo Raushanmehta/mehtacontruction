@@ -1,28 +1,48 @@
 import { motion } from "framer-motion";
 import {
-  FaPaintBrush,
-  FaPenNib,
-  FaDesktop,
-  FaPalette,
-  FaLaptopCode,
-  FaShoppingCart,
-  FaMobileAlt,
-  FaCogs,
-  FaShareAlt,
-  FaSearch,
-  FaBullhorn,
-  FaCode,
+  FaBuilding,
+  FaHardHat,
+  FaDraftingCompass,
+  FaTools,
+  FaHome,
+  FaCity,
+  FaRoad,
+  FaClipboardCheck,
 } from "react-icons/fa";
 
 const services = [
-  { title: "Brand Identity", icon: <FaPaintBrush /> },
-  { title: "Logo Design", icon: <FaPenNib /> },
-  { title: "UI/UX Design", icon: <FaDesktop /> },
-  { title: "Graphic Design", icon: <FaPalette /> },
-  { title: "Website Design", icon: <FaLaptopCode /> },
-  { title: "eCommerce Store", icon: <FaShoppingCart /> },
-  { title: "Mobile App", icon: <FaMobileAlt /> },
-  { title: "Software", icon: <FaCogs /> },
+  {
+    title: "Building Construction",
+    icon: <FaBuilding />,
+  },
+  {
+    title: "Architectural Design",
+    icon: <FaDraftingCompass />,
+  },
+  {
+    title: "Residential Projects",
+    icon: <FaHome />,
+  },
+  {
+    title: "Commercial Projects",
+    icon: <FaCity />,
+  },
+  {
+    title: "Renovation & Remodeling",
+    icon: <FaTools />,
+  },
+  {
+    title: "Road & Infrastructure",
+    icon: <FaRoad />,
+  },
+  {
+    title: "Project Management",
+    icon: <FaClipboardCheck />,
+  },
+  {
+    title: "Civil Engineering",
+    icon: <FaHardHat />,
+  },
 ];
 
 const container = {
@@ -60,14 +80,15 @@ export default function ServicesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-slate-800">
-            Empowering Digital Innovation
+            Building Excellence with Mehta Construction
           </h2>
 
           <p className="max-w-5xl mx-auto mt-6 text-gray-500 text-md leading-6 ">
-            At WebNX, we specialize in transforming ideas into powerful digital
-            solutions. From eye-catching design to seamless development, our
-            services drive growth and success for startups, SMEs, and
-            enterprises alike.
+            At Mehta Construction Private Limited, we deliver reliable
+            construction solutions with a commitment to quality, innovation, and
+            timely execution. From residential homes and commercial buildings to
+            infrastructure projects, our experienced team ensures every project
+            is built with precision, safety, and excellence.
           </p>
         </motion.div>
 
@@ -82,14 +103,6 @@ export default function ServicesSection() {
             <motion.div
               key={service.title}
               variants={item}
-              whileHover={{
-                y: -8,
-                scale: 1.03,
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 250,
-              }}
               className="group border border-gray-200 h-40 flex flex-col items-center justify-center cursor-pointer bg-white hover:bg-sky-500 hover:border-sky-500 transition-all duration-300 p-4"
             >
               {/* Icon */}
@@ -98,7 +111,7 @@ export default function ServicesSection() {
               </div>
 
               {/* Title */}
-              <h3 className="mt-8 text-xl font-semibold text-slate-700 group-hover:text-white transition-colors duration-300">
+              <h3 className="mt-8 text-md font-semibold text-slate-700 group-hover:text-white transition-colors duration-300">
                 {service.title}
               </h3>
             </motion.div>
