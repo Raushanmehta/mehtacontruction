@@ -70,7 +70,7 @@ const item = {
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 bg-white md:px-28">
+    <section className="py-20 bg-gray-50 md:px-28">
       <div className="max-w-7xl mx-auto px-5">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
@@ -79,11 +79,11 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-slate-800">
-            Building Excellence with Mehta Construction
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-800">
+            Our Services
           </h2>
 
-          <p className="max-w-5xl mx-auto mt-6 text-gray-500 text-md leading-6 ">
+          <p className="max-w-4xl mx-auto mt-4 text-gray-500 text-sm font-semibold">
             At Mehta Construction Private Limited, we deliver reliable
             construction solutions with a commitment to quality, innovation, and
             timely execution. From residential homes and commercial buildings to
