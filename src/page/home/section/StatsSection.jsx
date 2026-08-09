@@ -58,8 +58,8 @@ const item = {
 
 export default function StatsSection() {
   return (
-    <section className="py-20 bg-white md:px-28">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-8 bg-white md:px-28">
+      <div className="max-w-7xl mx-auto px-2">
         <motion.div
           variants={container}
           initial="hidden"
@@ -77,22 +77,22 @@ export default function StatsSection() {
                 className="text-center cursor-pointer"
               >
                 {/* Icon */}
-                <div className="flex justify-center mb-4">
-                  <Icon className="text-sky-500 text-5xl" />
+                <div className="flex justify-center mb-1">
+                  <Icon className="text-gray-500 text-4xl" />
                 </div>
 
                 {/* Number */}
-                <h2 className="text-3xl font-bold text-slate-800">
+                <h2 className="text-2xl font-bold text-slate-800">
                   {item.number}
                 </h2>
 
                 {/* Title */}
-                <h3 className="mt-2 text-xl font-bold text-slate-700">
+                <h3 className=" text-md font-semibold text-slate-700">
                   {item.title}
                 </h3>
 
                 {/* Subtitle */}
-                <p className="mt-2 text-md text-gray-500">
+                <p className=" text-md text-gray-500">
                   {item.subtitle}
                 </p>
               </motion.div>

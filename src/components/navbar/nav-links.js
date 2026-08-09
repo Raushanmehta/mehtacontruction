@@ -4,20 +4,24 @@ export const navLinks = [
     href: "#services",
   },
   {
-    title: "Capabilities",
-    href: "#capabilities",
+    title: "Companies",
+    href: "#companies",
   },
   {
-    title: "Products",
-    href: "#products",
+    title: "About Us",
+    href: "#about",
   },
   {
-    title: "Industries",
-    href: "#industries",
+    title: "Projects",
+    href: "#projects",
   },
   {
-    title: "Portfolio",
-    href: "#portfolio",
+    title: "Team",
+    href: "#team",
+  },
+  {
+    title: "Careers",
+    href: "#careers",
   },
   
 ];

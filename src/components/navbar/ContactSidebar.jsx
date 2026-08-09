@@ -69,7 +69,7 @@ export default function ContactSidebar({ open, onClose }) {
                   </p>
 
                   <h3 className="text-2xl font-semibold mt-2">
-                    sales@webnx.in
+                    mehtacontruction.in
                   </h3>
                 </div>
 
@@ -79,7 +79,7 @@ export default function ContactSidebar({ open, onClose }) {
                   </p>
 
                   <h3 className="text-2xl font-semibold mt-2">
-                    +1 844 44-93269
+                    +919304137746
                   </h3>
                 </div>
 
