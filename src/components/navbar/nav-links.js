@@ -2,6 +2,7 @@ export const navLinks = [
   {
     title: "Services",
     megaMenu: true,
+    columns: 3,
     items: [
       {
         title: "Web Development",
@@ -35,20 +36,10 @@ export const navLinks = [
       },
     ],
   },
-
-  {
-    title: "Companies",
-    href: "/companies",
-  },
-
-  {
-    title: "About Us",
-    href: "/about",
-  },
-
-  {
+   {
     title: "Projects",
     megaMenu: true,
+    columns: 3,
     items: [
       {
         title: "Commercial",
@@ -84,37 +75,44 @@ export const navLinks = [
   },
 
   {
+    title: "Companies",
+    href: "/companies",
+  },
+
+  {
+    title: "About Us",
+    href: "/about",
+  },
+
+ 
+
+  {
     title: "Team",
     megaMenu: true,
+    columns: 1,
     items: [
       {
         title: "Leadership",
-        description: "Executive Team",
         href: "/team/leadership",
       },
       {
         title: "Engineers",
-        description: "Civil Engineers",
         href: "/team/engineers",
       },
       {
         title: "Architects",
-        description: "Creative Architects",
         href: "/team/architects",
       },
       {
         title: "Designers",
-        description: "Interior Designers",
         href: "/team/designers",
       },
       {
         title: "Site Managers",
-        description: "Project Management",
         href: "/team/site-managers",
       },
       {
         title: "Support",
-        description: "Customer Support",
         href: "/team/support",
       },
     ],
@@ -123,23 +121,20 @@ export const navLinks = [
   {
     title: "Careers",
     megaMenu: true,
+    columns: 1,
     items: [
       {
         title: "Frontend Developer",
-        description: "React.js",
         href: "/careers/frontend",
       },
       {
         title: "Backend Developer",
-        description: "Node.js",
         href: "/careers/backend",
       },
       {
         title: "UI / UX Designer",
-        description: "Creative Design",
         href: "/careers/ui-ux",
       },
-    
     ],
   },
 ];

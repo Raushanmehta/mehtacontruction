@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, ChevronUp, ChevronDown } from "lucide-react";
 import {
   FaFacebook,
   FaInstagram,
@@ -14,14 +14,16 @@ import { navLinks } from "./nav-links";
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(null);
+
+  const toggleMenu = (title) => {
+    setActiveMenu((prev) => (prev === title ? null : title));
+  };
 
   return (
     <>
       {/* Menu Button */}
-      <button
-        onClick={() => setOpen(true)}
-        className="lg:hidden p-2"
-      >
+      <button onClick={() => setOpen(true)} className="lg:hidden p-2">
         <Menu size={28} />
       </button>
 
@@ -51,7 +53,6 @@ export default function MobileMenu() {
             >
               {/* Header */}
               <div className="flex items-center justify-between px-5 py-5 border-b border-gray-200">
-
                 <img
                   src="https://mehtaconstructions.com/wp-content/uploads/2018/02/tata-1.png"
                   alt="Mehta Construction"
@@ -64,33 +65,75 @@ export default function MobileMenu() {
                 >
                   <X size={28} />
                 </button>
-
               </div>
 
               {/* Navigation */}
               <div className="px-6 py-5">
-
                 {navLinks.map((item, index) => (
                   <motion.div
                     key={item.title}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{
-                      delay: index * 0.08,
-                    }}
+                    transition={{ delay: index * 0.08 }}
+                    className="border-b border-gray-200"
                   >
-                    <Link
-                      to={item.href}
-                      onClick={() => setOpen(false)}
-                      className="block py-4 border-b border-gray-200 font-medium text-slate-700 hover:text-sky-500 transition"
-                    >
-                      {item.title}
-                    </Link>
+                    {item.megaMenu ? (
+                      <>
+                        <button
+                          onClick={() => toggleMenu(item.title)}
+                          className="w-full flex items-center justify-between py-4 text-left font-medium text-slate-700 hover:text-sky-500 transition"
+                        >
+                          <span>{item.title}</span>
+
+                          {activeMenu === item.title ? (
+                            <ChevronUp size={18} />
+                          ) : (
+                            <ChevronDown size={18} />
+                          )}
+                        </button>
+
+                        <AnimatePresence>
+                          {activeMenu === item.title && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.25 }}
+                              className="overflow-hidden pl-4 pb-3"
+                            >
+                              {item.items.map((subItem) => (
+                                <Link
+                                  key={subItem.title}
+                                  to={subItem.href}
+                                  onClick={() => setOpen(false)}
+                                  className="block py-3 border-l-2 border-sky-500 pl-4 hover:bg-slate-50 rounded-md transition"
+                                >
+                                  <h4 className="font-medium text-slate-700">
+                                    {subItem.title}
+                                  </h4>
+
+                                  <p className="text-xs text-gray-500 mt-1">
+                                    {subItem.description}
+                                  </p>
+                                </Link>
+                              ))}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </>
+                    ) : (
+                      <Link
+                        to={item.href}
+                        onClick={() => setOpen(false)}
+                        className="block py-4 font-medium text-slate-700 hover:text-sky-500 transition"
+                      >
+                        {item.title}
+                      </Link>
+                    )}
                   </motion.div>
                 ))}
 
                 {/* Contact Button */}
-
                 <Link
                   to="/contact"
                   onClick={() => setOpen(false)}
@@ -102,9 +145,7 @@ export default function MobileMenu() {
 
                 {/* Social Icons */}
 
-
                 <div className="flex justify-center mt-10">
-
                   <a
                     href="https://wa.me/919304137746"
                     target="_blank"
@@ -116,36 +157,22 @@ export default function MobileMenu() {
                       className="w-40 hover:scale-105 transition duration-300"
                     />
                   </a>
-
                 </div>
 
                 <div className="flex justify-center gap-5 text-2xl mt-10">
-
-                  <a
-                    href="#"
-                    className="hover:text-sky-500 transition"
-                  >
+                  <a href="#" className="hover:text-sky-500 transition">
                     <FaFacebook />
                   </a>
 
-                  <a
-                    href="#"
-                    className="hover:text-pink-500 transition"
-                  >
+                  <a href="#" className="hover:text-pink-500 transition">
                     <FaInstagram />
                   </a>
 
-                  <a
-                    href="#"
-                    className="hover:text-sky-400 transition"
-                  >
+                  <a href="#" className="hover:text-sky-400 transition">
                     <FaTwitter />
                   </a>
 
-                  <a
-                    href="#"
-                    className="hover:text-blue-700 transition"
-                  >
+                  <a href="#" className="hover:text-blue-700 transition">
                     <FaLinkedinIn />
                   </a>
 
@@ -157,17 +184,11 @@ export default function MobileMenu() {
                   >
                     <FaWhatsapp />
                   </a>
-
                 </div>
-
-                {/* WhatsApp Button */}
-
-                
 
                 {/* Footer */}
 
                 <div className="mt-10 border-t border-gray-200 pt-6 text-center">
-
                   <h3 className="font-bold text-slate-800">
                     Mehta Construction Pvt. Ltd.
                   </h3>
@@ -175,9 +196,7 @@ export default function MobileMenu() {
                   <p className="text-sm text-gray-500 mt-2">
                     Building Dreams with Quality & Trust
                   </p>
-
                 </div>
-
               </div>
             </motion.div>
           </>

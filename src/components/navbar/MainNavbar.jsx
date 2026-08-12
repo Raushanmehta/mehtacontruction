@@ -17,6 +17,7 @@ export default function MainNavbar() {
 
           <div className="hidden lg:block">
             <NavMenu />
+            
           </div>
 
           <div className="hidden lg:flex items-center gap-8">

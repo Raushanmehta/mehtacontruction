@@ -1,115 +1,107 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
-
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { navLinks } from "./nav-links";
 
 export default function NavMenu() {
+  const [openMenu, setOpenMenu] = useState(null);
+
   return (
-    <NavigationMenu className="relative z-50 ">
-      <NavigationMenuList className="gap-8">
+    <nav className="flex items-center gap-8">
+      {navLinks.map((item) => (
+        <div
+          key={item.title}
+          className="relative"
+          onMouseEnter={() => setOpenMenu(item.title)}
+          onMouseLeave={() => setOpenMenu(null)}
+        >
+          {item.megaMenu ? (
+            <>
+              <button
+                className="flex items-center gap-1 uppercase text-[15px] font-medium hover:text-sky-600 transition-colors"
+              >
+                {item.title}
 
-        {navLinks.map((item) => (
-          <NavigationMenuItem key={item.title} className="relative">
-
-            {item.megaMenu ? (
-              <>
-                <NavigationMenuTrigger
-                  className="
-                    bg-white
-                    uppercase
-                    text-[15px]
-                    font-medium
-                    hover:text-sky-600
-                    data-[state=open]:text-sky-600
-                    
-                  "
+                <motion.span
+                  animate={{
+                    rotate: openMenu === item.title ? 180 : 0,
+                  }}
+                  transition={{ duration: 0.25 }}
                 >
-                  {item.title}
-                </NavigationMenuTrigger>
+                  <ChevronDown size={16} />
+                </motion.span>
+              </button>
 
-                <NavigationMenuContent
-                  className="
-                    bg-white
-                    ittems-center
-                    justify-center
-                    p-4
-                    
-                  "
-                >
-                  <div className="grid grid-cols-3 gap-6">
-
+              <AnimatePresence>
+                {openMenu === item.title && (
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                      y: 15,
+                      scale: 0.97,
+                    }}
+                    animate={{
+                      opacity: 1,
+                      y: 0,
+                      scale: 1,
+                    }}
+                    exit={{
+                      opacity: 0,
+                      y: 10,
+                      scale: 0.97,
+                    }}
+                    transition={{
+                      duration: 0.22,
+                      ease: "easeOut",
+                    }}
+                    className={`
+                      absolute
+                      left-0
+                      top-full
+                      mt-7
+                      bg-slate-50 
+                      
+                      p-6
+                      z-50
+                      ${
+                        item.columns === 1
+                          ? "w-54 text-sm hover:text-sky-600"
+                          : "w-[700px] grid grid-cols-3 gap-6"
+                      }
+                    `}
+                  >
                     {item.items.map((subItem) => (
-                      <NavigationMenuLink
-                        asChild
+                      <Link
                         key={subItem.title}
+                        to={subItem.href}
+                        className=" "
                       >
-                        <Link
-                          to={subItem.href}
-                          className="
-                            group
-                            
-                            p-5
-                            transition-all
-                            duration-300
-                            hover:bg-slate-50
-                          "
-                        >
-                          <h3
-                            className="
-                              text-base
-                              font-semibold
-                              transition-colors
-                              group-hover:text-sky-600
-                            "
-                          >
-                            {subItem.title}
-                          </h3>
+                        <h3 className="font-semibold text-gray-900">
+                          {subItem.title}
+                        </h3>
 
-                          <p
-                            className="
-                              mt-2
-                              text-sm
-                              leading-6
-                              text-slate-500
-                            "
-                          >
+                        {subItem.description && (
+                          <p className="mt-2 text-sm text-slate-500">
                             {subItem.description}
                           </p>
-                        </Link>
-                      </NavigationMenuLink>
+                        )}
+                      </Link>
                     ))}
-
-                  </div>
-                </NavigationMenuContent>
-              </>
-            ) : (
-              <NavigationMenuLink asChild>
-                <Link
-                  to={item.href}
-                  className="
-                    uppercase
-                    text-[15px]
-                    font-medium
-                    transition-colors
-                    hover:text-sky-600
-                  "
-                >
-                  {item.title}
-                </Link>
-              </NavigationMenuLink>
-            )}
-
-          </NavigationMenuItem>
-        ))}
-
-      </NavigationMenuList>
-    </NavigationMenu>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </>
+          ) : (
+            <Link
+              to={item.href}
+              className="uppercase text-[15px] font-medium hover:text-sky-600"
+            >
+              {item.title}
+            </Link>
+          )}
+        </div>
+      ))}
+    </nav>
   );
 }

@@ -78,17 +78,8 @@ function NavigationMenuContent({
     <NavigationMenuPrimitive.Content
       data-slot="navigation-menu-content"
       className={cn(
-        `
-        bg-white
-        
-        shadow-2xl
-        
-
-        data-ending-style:data-activation-direction=left:translate-x-[50%]
-        data-ending-style:data-activation-direction=right:translate-x-[-50%]
-        data-starting-style:data-activation-direction=left:translate-x-[-50%]
-        data-starting-style:data-activation-direction=right:translate-x-[50%]
-
+        `bg-white shadow-xl  border-0 ring-0 outline-none rounded-xl 
+       
        
         `,
         className
