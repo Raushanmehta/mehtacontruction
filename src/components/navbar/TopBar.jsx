@@ -17,10 +17,10 @@ export default function TopBar() {
 
   return (
     <>
-      <div className=" hidden lg:flex h-10 border-b border-gray-200 flex items-center justify-end gap-8 px-8 lg:px-32 text-gray-600 text-sm ">
+      <div className=" hidden  lg:flex h-10 border-b border-gray-200 flex items-center justify-end gap-8 px-8 lg:px-32 text-gray-600 text-sm ">
 
         {/* Toll Free */}
-        <div className="flex items-center gap-2 text-[14px] font-semibold">
+        <div className="flex items-center gap-2 text-[14px] font-semibold text-black">
           <Headphones size={16} />
           <span>TOLL FREE +1-844-HI-MEHTA CONTRUCTION</span>
 
@@ -37,11 +37,11 @@ export default function TopBar() {
           </button>
         </div>
 
-        <Link className="text-[14px] font-semibold" to="/contact">CONTACTS</Link>
+        {/* <Link className="text-[14px] font-semibold" to="/contact">CONTACTS</Link> */}
 
-        <Link className="text-[14px] font-semibold" to="/blog">BLOG</Link>
+        <Link className="text-[14px] font-semibold text-black" to="/blog">BLOG</Link>
 
-        <Link to="/login" className="flex items-center gap-2 text-[14px] font-semibold">
+        <Link to="/login" className="flex items-center gap-2 text-[14px] font-semibold text-black">
           <Lock size={16} />
           LOGIN
         </Link>

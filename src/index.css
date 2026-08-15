@@ -96,4 +96,43 @@
   --sidebar-ring: oklch(0.708 0 0)
 }
 
+/* crasul  */
+/* 
+.project-slider .slick-dots {
+  bottom: -42px;
+}
 
+.project-slider .slick-dots li {
+  margin: 0 2px;
+}
+
+.project-slider .slick-dots li button:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #b7bec7;
+  border-radius: 50%;
+  opacity: 1;
+  font-size: 0;
+  top: 0;
+  left: 0;
+}
+
+.project-slider .slick-dots li.slick-active button:before {
+  width: 30px;
+  border-radius: 20px;
+  background: #d1a642;
+}
+
+.project-slider .slick-dots li.slick-active {
+  width: 30px;
+}
+
+.project-slider .slick-list {
+  margin: 0 -8px;
+}
+
+.project-slider .slick-slide {
+  padding: 0 8px;
+}
+ */

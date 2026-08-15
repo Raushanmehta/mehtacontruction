@@ -28,7 +28,7 @@ export default function SupportPopup({ isOpen, onClose }) {
               {/* Left */}
               <div>
                 <h1 className="text-6xl font-semibold mb-10">
-                  Our Sales & Support
+                  Our Service & Support
                 </h1>
 
                 <h2 className="text-2xl font-semibold mb-4">
@@ -41,8 +41,10 @@ export default function SupportPopup({ isOpen, onClose }) {
 
                 <div className="space-y-5 text-lg font-semibold">
                   <p>INDIA: +91-9304137746</p>
-                  <p>USA: +1-844-HI-MEHTA</p>
                   <p>Email: mehtacontruction@gmail.com</p>
+                  <p>Address:Patna city, Bihar 800008 </p>
+
+
                 </div>
               </div>
 

@@ -6,70 +6,71 @@ export const navLinks = [
     items: [
       {
         title: "Web Development",
-        description: "Modern React & Next.js websites",
         href: "/services/web-development",
+        image: "https://img.magnific.com/free-photo/construction-site-sunset_23-2152006125.jpg?semt=ais_test_b&w=740&q=80",
       },
       {
         title: "Mobile Apps",
-        description: "Android & iOS Applications",
         href: "/services/mobile-app",
+        image: "https://www.park.edu/wp-content/uploads/2025/04/Construction-Management-Park-University-min.png",
       },
       {
         title: "UI / UX Design",
-        description: "Beautiful user interfaces",
         href: "/services/ui-ux",
+        image: "https://img.magnific.com/free-photo/construction-site-sunset_23-2152006125.jpg?semt=ais_test_b&w=740&q=80",
       },
       {
         title: "Cloud Solutions",
-        description: "AWS, Azure & DevOps",
         href: "/services/cloud",
+        image: "/images/services/cloud.jpg",
       },
       {
         title: "SEO",
-        description: "Grow your website traffic",
         href: "/services/seo",
+        image: "/images/services/seo.jpg",
       },
       {
         title: "Digital Marketing",
-        description: "Social media & campaigns",
         href: "/services/digital-marketing",
+        image: "/images/services/digital-marketing.jpg",
       },
     ],
   },
-   {
+
+  {
     title: "Projects",
     megaMenu: true,
     columns: 3,
     items: [
       {
         title: "Commercial",
-        description: "Office & Business Projects",
         href: "/projects/commercial",
+        image: "/images/projects/commercial.jpg",
       },
       {
         title: "Residential",
-        description: "Luxury Homes",
         href: "/projects/residential",
+        image: "/images/projects/residential.jpg",
       },
       {
         title: "Interior",
-        description: "Interior Design",
         href: "/projects/interior",
+        image: "/images/projects/interior.jpg",
       },
       {
         title: "Architecture",
-        description: "Modern Architecture",
         href: "/projects/architecture",
+        image: "/images/projects/architecture.jpg",
       },
       {
         title: "Renovation",
-        description: "Home Renovation",
         href: "/projects/renovation",
+        image: "/images/projects/renovation.jpg",
       },
       {
         title: "Infrastructure",
-        description: "Large Scale Projects",
         href: "/projects/infrastructure",
+        image: "/images/projects/infrastructure.jpg",
       },
     ],
   },
@@ -84,8 +85,6 @@ export const navLinks = [
     href: "/about",
   },
 
- 
-
   {
     title: "Team",
     megaMenu: true,
@@ -94,26 +93,32 @@ export const navLinks = [
       {
         title: "Leadership",
         href: "/team/leadership",
+        image: "/images/team/leadership.jpg",
       },
       {
         title: "Engineers",
         href: "/team/engineers",
+        image: "/images/team/engineers.jpg",
       },
       {
         title: "Architects",
         href: "/team/architects",
+        image: "/images/team/architects.jpg",
       },
       {
         title: "Designers",
         href: "/team/designers",
+        image: "/images/team/designers.jpg",
       },
       {
         title: "Site Managers",
         href: "/team/site-managers",
+        image: "/images/team/site-managers.jpg",
       },
       {
         title: "Support",
         href: "/team/support",
+        image: "/images/team/support.jpg",
       },
     ],
   },
@@ -124,16 +129,19 @@ export const navLinks = [
     columns: 1,
     items: [
       {
-        title: "Frontend Developer",
+        title: "Career Opportunities",
         href: "/careers/frontend",
+        image: "/images/careers/frontend.jpg",
       },
       {
-        title: "Backend Developer",
+        title: "Current Openings",
         href: "/careers/backend",
+        image: "/images/careers/backend.jpg",
       },
       {
-        title: "UI / UX Designer",
+        title: "Apply Online",
         href: "/careers/ui-ux",
+        image: "/images/careers/ui-ux.jpg",
       },
     ],
   },

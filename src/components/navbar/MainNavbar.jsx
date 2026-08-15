@@ -24,12 +24,12 @@ export default function MainNavbar() {
             <HireButton />
 
             <Grip
-              className="cursor-pointer"
+              className="cursor-pointer text-black "
               onMouseEnter={() => setOpen(true)}
             />
           </div>
 
-          <div className="lg:hidden">
+          <div className="lg:hidden text-black">
             <MobileMenu />
           </div>
         </div>
