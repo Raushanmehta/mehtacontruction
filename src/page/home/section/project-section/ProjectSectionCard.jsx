@@ -6,7 +6,7 @@ import {
   Clock3,
 } from "lucide-react";
 
-const ProjectSectionCard = ({ project }) => {
+export default function ProjectSectionCard  ({ project })  {
   const isCompleted = project.status === "Completed";
 
   return (
@@ -135,5 +135,3 @@ const ProjectSectionCard = ({ project }) => {
     </div>
   );
 };
-
-export default ProjectSectionCard;

@@ -109,7 +109,7 @@ const ConsultationForm = () => {
             shadow-lg
             transition-all
             duration-300
-            hover:bg-[#d0a546]
+            hover:bg-sky-500
             hover:scale-105
           "
           aria-label="Close consultation form"
@@ -135,6 +135,7 @@ const ConsultationForm = () => {
             <h2
               className="
                 text-2xl
+                text-center
                 font-bold
                 text-[#10264b]
                 sm:text-[26px]
@@ -143,7 +144,7 @@ const ConsultationForm = () => {
               Get a Free Consultation
             </h2>
 
-            <p className="mt-1 text-sm text-gray-500">
+            <p className="mt-1 text-center text-sm text-gray-500">
               Tell us about your construction requirements.
             </p>
           </div>
@@ -157,8 +158,8 @@ const ConsultationForm = () => {
               placeholder="Name *"
               required
               className="
-                h-[55px]
-                rounded-[20px]
+                h-[48px]
+                rounded-[5px]
                 border-[#10264b]
                 bg-white
                 px-6
@@ -179,8 +180,8 @@ const ConsultationForm = () => {
               placeholder="Mobile number *"
               required
               className="
-                h-[55px]
-                rounded-[20px]
+                h-[48px]
+                rounded-[5px]
                 border-[#10264b]
                 bg-white
                 px-6
@@ -200,8 +201,9 @@ const ConsultationForm = () => {
               type="email"
               placeholder="Email address (optional)"
               className="
-                h-[55px]
-                rounded-[20px]
+                               h-[48px]
+                rounded-[5px]
+                            
                 border-[#10264b]
                 bg-white
                 px-6
@@ -220,8 +222,8 @@ const ConsultationForm = () => {
               placeholder="Location *"
               required
               className="
-    h-[55px]
-    rounded-[20px]
+   h-[48px]
+                rounded-[5px]
     border-[#10264b]
     bg-white
     px-6
@@ -240,9 +242,9 @@ const ConsultationForm = () => {
               onChange={handleChange}
               placeholder="Project details (optional)"
               className="
-                min-h-[95px]
+                min-h-[60px]
                 resize-none
-                rounded-[20px]
+                rounded-[5px]
                 border-[#10264b]
                 bg-white
                 px-6
@@ -259,10 +261,10 @@ const ConsultationForm = () => {
             <Button
               type="submit"
               className="
-                h-[55px]
+                h-[48px]
                 w-full
-                rounded-[20px]
-                bg-[#d0a546]
+                rounded-[5px]
+                bg-black
                 text-[16px]
                 font-bold
                 text-white
@@ -271,7 +273,7 @@ const ConsultationForm = () => {
                 transition-all
                 duration-300
                 hover:-translate-y-[1px]
-                hover:bg-[#bd9438]
+                hover:bg-sky-500
               "
             >
               LET'S BUILD YOUR DREAM
@@ -285,7 +287,7 @@ const ConsultationForm = () => {
                 justify-center
                 gap-2
                 text-sm
-                text-[#d0a546]
+                text-sky-500
               "
             >
               <LockKeyhole size={16} strokeWidth={1.8} />
