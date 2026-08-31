@@ -1,6 +1,7 @@
+
 const ServiceSectionCard = ({ services }) => {
   return (
-    <div className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {services.map((service, index) => {
         const Icon = service.icon;
 
@@ -9,89 +10,121 @@ const ServiceSectionCard = ({ services }) => {
             key={index}
             className="
               group
-              min-h-[310px]
+              overflow-hidden
               rounded-2xl
-              border
-              border-gray-50
+              border-l
+              border-r
+              border-5
+              border-gray-200
               bg-white
-              p-6
-              shadow-sm
               transition-all
-              duration-300
-              hover:-translate-y-1
-              hover:shadow-xl
-              sm:p-7
+             
+              hover:border-sky-500
+              
             "
           >
-            {/* Icon + Title */}
-            <div className="mb-5 flex items-center gap-4">
+            {/* ================= TOP SECTION ================= */}
+            <div
+              className="
+                flex
+                h-[220px]
+                items-center
+                justify-center
+                bg-gray-50
+                transition-all
+                duration-300
+                object-contain
+                group-hover:bg-sky-50
+              "
+            >
+              {/* Icon / Image */}
+              {service.image ? (
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="
+                    h-full
+                    w-full
+                    object-cover
+                    object-contain
+                  "
+                />
+              ) : (
+                <div
+                  className="
+                    flex
+                    h-20
+                    w-20
+                    items-center
+                    justify-center
+                    rounded-2xl
+                    bg-sky-500
+                    text-white
+                    transition-all
+                    duration-300
+                    group-hover:scale-105
+                    group-hover:bg-sky-600
+                  "
+                >
+                  <Icon size={38} strokeWidth={1.8} />
+                </div>
+              )}
+            </div>
 
-              {/* Icon */}
-              <div
-                className="
-                  flex
-                  h-14
-                  w-14
-                  shrink-0
-                  items-center
-                  justify-center
-                  rounded-2xl
-                  bg-sky-500
-                  text-white
-                  transition-all
-                  duration-300
-                  group-hover:bg-sky-600
-                "
-              >
-                <Icon size={28} strokeWidth={1.8} />
-              </div>
-
+            {/* ================= BOTTOM SECTION ================= */}
+            <div className="p-4 sm:p-4">
               {/* Title */}
               <h3
                 className="
-                  text-lg
-                  font-bold
-                  leading-6
+                  mb-3
+                  text-xl
+                  leading-7
                   text-[#10264b]
-                  sm:text-[19px]
+                  transition-colors
+                  duration-300
+                  group-hover:text-sky-600
+                  font-base
                 "
               >
                 {service.title}
               </h3>
-            </div>
 
-            {/* Description */}
-            <p
-              className="
-                mb-5
-                text-sm
-                font-semibold
-                leading-6
-                text-gray-500
-              "
-            >
-              {service.description}
-            </p>
+              {/* Description */}
+              <p
+                className="
+                  mb-5
+                  text-sm
+                  leading-6
+                  text-gray-800
+                "
+              >
+                {service.description}
+              </p>
 
-            {/* Tags */}
-            <div className="flex flex-wrap gap-2">
-              {service.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="
-                    rounded-full
-                    bg-gray-100
-                    px-2.5
-                    py-1
-                    text-[11px]
-                    font-medium
-                    text-[#66758a]
-                    sm:text-xs
-                  "
-                >
-                  {tag}
-                </span>
-              ))}
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2">
+                {service.tags?.map((tag) => (
+                  <span
+                    key={tag}
+                    className="
+                      rounded-full
+                      bg-gray-100
+                      px-3
+                      py-1.5
+                      text-[11px]
+                      font-medium
+                      text-[#66758a]
+                      transition-colors
+                      duration-300
+                      group-hover:bg-sky-50
+                      group-hover:text-sky-600
+                      sm:text-xs
+                    "
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         );

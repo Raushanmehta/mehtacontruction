@@ -54,7 +54,7 @@ export default function MobileMenu() {
               {/* Header */}
               <div className="flex items-center justify-between px-5 py-5 border-b border-gray-200">
                 <img
-                  src="https://mehtaconstructions.com/wp-content/uploads/2018/02/tata-1.png"
+                  src="/image/mehta-contruction-logo-blue.png"
                   alt="Mehta Construction"
                   className="h-14 object-contain"
                 />

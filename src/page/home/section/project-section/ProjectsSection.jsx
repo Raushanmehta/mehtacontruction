@@ -80,7 +80,7 @@ export default function ProjectsSection() {
   );
 
   return (
-    <section className="bg-[#f8f9f7] py-14 sm:py-16 lg:py-20">
+    <section className="bg-[#f8f9f7] py-14 sm:py-16 lg:py-24">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
 
         {/* Heading */}
@@ -95,7 +95,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* Carousel */}
-        <div className="relative px-8 sm:px-10">
+        <div className="relative px-2 sm:px-10">
           <Carousel
             plugins={[autoplay.current]}
             opts={{

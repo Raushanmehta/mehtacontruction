@@ -28,7 +28,7 @@ export default function SupportPopup({ isOpen, onClose }) {
               {/* Left */}
               <div>
                 <h1 className="text-6xl font-semibold mb-10">
-                  Our Service & Support
+                  Our Service
                 </h1>
 
                 <h2 className="text-2xl font-semibold mb-4">

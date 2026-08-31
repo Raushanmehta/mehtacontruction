@@ -58,8 +58,8 @@ const item = {
 
 export default function StatsSection() {
   return (
-    <section className="py-8 bg-white md:px-28">
-      <div className="max-w-7xl mx-auto px-2">
+     <section className="relative bg-gray-50 py-12 md:px-26">
+      <div className="relative mx-auto max-w-7xl px-6">
         <motion.div
           variants={container}
           initial="hidden"
