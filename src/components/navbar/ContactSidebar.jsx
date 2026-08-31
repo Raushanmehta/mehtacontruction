@@ -42,7 +42,7 @@ export default function ContactSidebar({ open, onClose }) {
 
             <div className="p-12">
               <img
-                src="https://mehtaconstructions.com/wp-content/uploads/2018/02/tata-1.png"
+                src="image/mehta-contruction-logo-blue.png"
                 className="h-16 "
                 alt=""
               />

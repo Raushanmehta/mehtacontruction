@@ -23,21 +23,20 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-400 md:px-36 py-6 px-6">
+    <footer className="bg-black text-gray-400 md:px-32 py-6 px-6">
       <div className="w-full">
 
         {/* ================= TOP SECTION ================= */}
         <div className="min-h-[72px] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 py-5 sm:py-0 border-b border-gray-800">
 
           {/* LOGO */}
-          <Link to="/" className="flex items-center">
-            <div className="text-white text-4xl sm:text-5xl font-black italic tracking-[-3px]">
-              Mehta <br /> Construction
-              <span className="inline-block ml-1 text-2xl sm:text-3xl not-italic">
-                △
-              </span>
-            </div>
-          </Link>
+          <Link href="/" className="flex items-center">
+      <img
+        src="/image/mehta-contruction-logo-white.png"
+        alt="Mehta Construction"
+        className="h-16 w-auto"
+      />
+    </Link>
 
           {/* PHONE */}
           <div className="mr-0 sm:mr-[5%] lg:mr-[10%]">
@@ -178,17 +177,12 @@ export default function Footer() {
       {/* ================= CERTIFICATION LOGOS ================= */}
       <div className="">
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
+        {/* <motion.div
           className="
             grid
             grid-cols-3
             sm:grid-cols-6
             lg:grid-cols-6
-            border-t
             border-b
             border-gray-700
             gap-10
@@ -204,14 +198,10 @@ export default function Footer() {
               className="h-20 sm:h-24 object-contain opacity-70 hover:opacity-100 transition"
             />
           ))}
-        </motion.div>
+        </motion.div> */}
 
         {/* ================= LEGAL LINKS ================= */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          viewport={{ once: true }}
           className="
             flex
             flex-wrap
@@ -237,10 +227,6 @@ export default function Footer() {
 
         {/* ================= TERMS ================= */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          viewport={{ once: true }}
           className="text-center py-3 text-[16px] border-b border-gray-700"
         >
           By exploring this site, you acknowledge and agree to be bound by these{" "}
@@ -251,64 +237,6 @@ export default function Footer() {
             Universal Terms of Service
           </FooterLink>
           .
-        </motion.div>
-
-        {/* ================= BOTTOM LINKS ================= */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          viewport={{ once: true }}
-          className="
-            flex
-            flex-wrap
-            justify-center
-            gap-10
-            py-3
-            text-[16px]
-          "
-        >
-          <FooterLink
-            to="/privacy-policy"
-            className="inline-block"
-          >
-            Privacy Policy
-          </FooterLink>
-
-          <FooterLink
-            to="/refund-cancellation-policy"
-            className="inline-block"
-          >
-            Refund and Cancellation Policy
-          </FooterLink>
-
-          <FooterLink
-            to="/hiring-terms"
-            className="inline-block"
-          >
-            Hiring Terms
-          </FooterLink>
-        </motion.div>
-
-        {/* ================= COPYRIGHT ================= */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.7 }}
-          viewport={{ once: true }}
-          className="text-center text-[16px] text-gray-500 leading-7"
-        >
-          <p>
-            Copyright © 2026 Mehta Construction. All Rights Reserved.
-          </p>
-
-          <p>
-            CIN: UXXXXXXXXXXXXXXX | D-U-N-S®: XXXXXXXXX
-          </p>
-
-          <p>
-            MSME: UDYAM-XX-XX-XXXXXXX | GSTIN: XXXXXXXXXXXXXXX
-          </p>
         </motion.div>
 
       </div>
