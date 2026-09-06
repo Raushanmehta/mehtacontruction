@@ -25,18 +25,16 @@ export default function Footer() {
   return (
     <footer className="bg-black text-gray-400 md:px-32 py-6 px-6">
       <div className="w-full">
-
         {/* ================= TOP SECTION ================= */}
         <div className="min-h-[72px] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 py-5 sm:py-0 border-b border-gray-800">
-
           {/* LOGO */}
           <Link href="/" className="flex items-center">
-      <img
-        src="/image/mehta-contruction-logo-white.png"
-        alt="Mehta Construction"
-        className="h-16 w-auto"
-      />
-    </Link>
+            <img
+              src="/image/mehta-contruction-logo-white.png"
+              alt="Mehta Construction"
+              className="h-16 w-auto"
+            />
+          </Link>
 
           {/* PHONE */}
           <div className="mr-0 sm:mr-[5%] lg:mr-[10%]">
@@ -55,107 +53,65 @@ export default function Footer() {
 
         {/* ================= MAIN LINKS ================= */}
         <div className="relative py-6 sm:py-7">
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16 pr-0 lg:pr-[180px]">
-
             {/* COMPANY */}
             <div>
               <FooterHeading title="Company" />
 
-              <FooterLink to="/about">
-                Who We Are
-              </FooterLink>
+              <FooterLink to="/about">Who We Are</FooterLink>
 
-              <FooterLink to="/chairman-message">
-                Chairman's Message
-              </FooterLink>
+              <FooterLink to="/chairman-message">Chairman's Message</FooterLink>
 
-              <FooterLink to="/leadership">
-                Leadership
-              </FooterLink>
+              <FooterLink to="/leadership">Leadership</FooterLink>
 
-              <FooterLink to="/sustainability">
-                Sustainability
-              </FooterLink>
+              <FooterLink to="/sustainability">Sustainability</FooterLink>
 
-              <FooterLink to="/foundation">
-                Mehta Foundation
-              </FooterLink>
+              <FooterLink to="/foundation">Mehta Foundation</FooterLink>
             </div>
 
             {/* MEHTA CONSTRUCTION */}
             <div>
               <FooterHeading title="Mehta Construction" />
 
-              <FooterLink to="/homes">
-                Homes
-              </FooterLink>
+              <FooterLink to="/homes">Homes</FooterLink>
 
-              <FooterLink to="/about-us">
-                About Us
-              </FooterLink>
+              <FooterLink to="/about-us">About Us</FooterLink>
 
-              <FooterLink to="/services">
-                Services
-              </FooterLink>
+              <FooterLink to="/services">Services</FooterLink>
 
-              <FooterLink to="/projects">
-                Projects
-              </FooterLink>
+              <FooterLink to="/projects">Projects</FooterLink>
 
-              <FooterLink to="/our-team">
-                Our Team
-              </FooterLink>
+              <FooterLink to="/our-team">Our Team</FooterLink>
 
-              <FooterLink to="/careers">
-                Careers
-              </FooterLink>
+              <FooterLink to="/careers">Careers</FooterLink>
             </div>
 
             {/* USEFUL LINKS */}
             <div>
               <FooterHeading title="Useful Links" />
 
-              <FooterLink to="/latest-news">
-                Latest News
-              </FooterLink>
+              <FooterLink to="/latest-news">Latest News</FooterLink>
 
-              <FooterLink to="/blogs">
-                Blogs
-              </FooterLink>
+              <FooterLink to="/blogs">Blogs</FooterLink>
 
-              <FooterLink to="/faqs">
-                FAQs
-              </FooterLink>
+              <FooterLink to="/faqs">FAQs</FooterLink>
 
-              <FooterLink to="/testimonials">
-                Testimonials
-              </FooterLink>
+              <FooterLink to="/testimonials">Testimonials</FooterLink>
 
-              <FooterLink to="/case-studies">
-                Case Studies
-              </FooterLink>
+              <FooterLink to="/case-studies">Case Studies</FooterLink>
             </div>
 
             {/* SAFETY & QUALITY */}
             <div>
               <FooterHeading title="Safety & Quality" />
 
-              <FooterLink to="/safety">
-                Safety Standards
-              </FooterLink>
+              <FooterLink to="/safety">Safety Standards</FooterLink>
 
-              <FooterLink to="/quality-control">
-                Quality Control
-              </FooterLink>
+              <FooterLink to="/quality-control">Quality Control</FooterLink>
 
-              <FooterLink to="/quality-assurance">
-                Quality Assurance
-              </FooterLink>
+              <FooterLink to="/quality-assurance">Quality Assurance</FooterLink>
 
-              <FooterLink to="/site-safety">
-                Site Safety
-              </FooterLink>
+              <FooterLink to="/site-safety">Site Safety</FooterLink>
 
               <FooterLink to="/environment">
                 Environmental Responsibility
@@ -176,7 +132,6 @@ export default function Footer() {
 
       {/* ================= CERTIFICATION LOGOS ================= */}
       <div className="">
-
         {/* <motion.div
           className="
             grid
@@ -215,35 +170,24 @@ export default function Footer() {
           "
         >
           {footerLinks.map((item) => (
-            <FooterLink
-              key={item}
-              to="#"
-              className="inline-block"
-            >
+            <FooterLink key={item} to="#" className="inline-block">
               {item}
             </FooterLink>
           ))}
         </motion.div>
 
         {/* ================= TERMS ================= */}
-        <motion.div
-          className="text-center py-3 text-[16px] border-b border-gray-700"
-        >
+        <motion.div className="text-center py-3 text-[16px] border-b border-gray-700">
           By exploring this site, you acknowledge and agree to be bound by these{" "}
-          <FooterLink
-            to="/terms"
-            className="inline underline"
-          >
+          <FooterLink to="/terms" className="inline underline">
             Universal Terms of Service
           </FooterLink>
           .
         </motion.div>
-
       </div>
     </footer>
   );
 }
-
 
 /* =========================================================
    FOOTER HEADING
@@ -260,7 +204,6 @@ function FooterHeading({ title }) {
     </div>
   );
 }
-
 
 /* =========================================================
    FOOTER LINK

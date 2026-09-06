@@ -80,12 +80,12 @@ export default function ProjectsSection() {
   );
 
   return (
-    <section className="bg-[#f8f9f7] py-14 sm:py-16 lg:py-24">
+    <section className="bg-white py-14 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
 
         {/* Heading */}
         <div className="mb-10 text-center sm:mb-12">
-          <h2 className="text-2xl font-bold text-slate-800 md:text-3xl">
+          <h2 className="text-2xl font-bold text-slate-800 md:text-4xl">
             Recent Projects
           </h2>
 

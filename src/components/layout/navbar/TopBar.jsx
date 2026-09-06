@@ -27,7 +27,7 @@ export default function TopBar() {
           {/* Only Chevron Clickable */}
           <button
             onClick={toggleSupport}
-            className="cursor-pointer hover:text-sky-600 transition"
+            className="cursor-pointer hover:text-[#0081CD] transition"
           >
             {isOpen ? (
               <ChevronUp size={16} />

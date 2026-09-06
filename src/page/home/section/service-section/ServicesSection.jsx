@@ -62,12 +62,12 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="relative bg-gray-50 py-12 md:px-26">
+    <section className="relative bg-white py-14 sm:py-16 lg:py-20  md:px-26">
       <div className="relative mx-auto max-w-7xl px-6">
 
         {/* Heading */}
         <div className="mb-10 text-center sm:mb-14">
-          <p className="mb-2 text-sm uppercase tracking-[3px] text-sky-500">
+          <p className="mb-2 text-sm uppercase tracking-[3px] text-[#0081CD]">
             What We Offer
           </p>
 
@@ -75,7 +75,7 @@ const ServicesSection = () => {
             Our Services
           </h2>
 
-          <div className="mx-auto mt-4 h-[2px] w-16 bg-sky-500" />
+          <div className="mx-auto mt-4 h-[2px] w-16 bg-[#0081CD]" />
 
           <p className="mx-auto mt-4 max-w-4xl text-sm  text-gray-800">
             Comprehensive solutions tailored to bring your architectural

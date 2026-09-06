@@ -1,8 +1,8 @@
 
 import './App.css'
-import Footer from './components/footer/Footer'
-import Navbar from './components/navbar/Navbar'
-import TopBar from './components/navbar/TopBar'
+import Footer from './components/layout/footer/Footer'
+import Navbar from './components/layout/navbar/Navbar'
+import TopBar from './components/layout/navbar/TopBar'
 import EnquirySection from './page/home/enqury-form/EnquirySection'
 import Home from './page/home/Home'
 
@@ -15,7 +15,6 @@ function App() {
     <Navbar />
     <Home/>
     <EnquirySection />
-
     <Footer/>
     </>
      

@@ -75,7 +75,7 @@ export default function ContactSidebar({ open, onClose }) {
                 alt=""
               />
 
-              <h2 className="text-4xl py-4 text-gray-800 hover:text-[#42E442]"><a href="/contact">Contact Us</a></h2>
+              <h2 className="text-4xl py-4 text-black hover:text-[#0081CD]"><a href="/contact">Contact Us</a></h2>
 
               <p className="text-gray-500 text-sm mb-8 text-gray-800">
                 Our friendly and knowledgeable staff is waiting to hear from
@@ -99,7 +99,7 @@ export default function ContactSidebar({ open, onClose }) {
                   <h3 className="text-2xl font-semibold mt-2 text-gray-800">
                     <a
                       href="mailto:info@mehtaconstruction.in"
-                      className="transition-colors hover:text-[#42E442]"
+                      className="transition-colors hover:text-[#0081CD]"
                     >
                       info@mehtacontructuion.in
                     </a>
@@ -114,7 +114,7 @@ export default function ContactSidebar({ open, onClose }) {
                   <h3 className="text-2xl font-semibold mt-2 text-gray-800">
                     <a
                       href="tel:+919304137746"
-                      className="transition-colors hover:text-[#42E442]"
+                      className="transition-colors hover:text-[#0081CD]"
                     >
                       +91 9304137746
                     </a>
@@ -134,7 +134,7 @@ export default function ContactSidebar({ open, onClose }) {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={name}
-                        className="transition-all duration-200 hover:-translate-y-1 hover:text-[#42E442]"
+                        className="transition-all duration-200 hover:-translate-y-1 hover:text-[#0081CD]"
                       >
                         <Icon />
                       </a>

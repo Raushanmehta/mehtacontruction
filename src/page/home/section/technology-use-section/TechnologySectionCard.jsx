@@ -12,7 +12,7 @@ const TechnologySectionCard = ({ technology, variants }) => {
         overflow-hidden
         rounded-2xl
         border
-        border-[#18345e]
+        border-black
         bg-white
         p-7
         shadow-sm
@@ -37,18 +37,18 @@ const TechnologySectionCard = ({ technology, variants }) => {
           items-center
           justify-center
           rounded-2xl
-          bg-sky-500
+          bg-[#0081CD]
           text-white
           transition-all
           duration-300
-          group-hover:bg-[#d3a033]
+          group-hover:bg-black
         "
       >
         <Icon size={25} />
       </div>
 
       {/* Title */}
-      <h3 className="mb-4 text-xl font-bold text-[#10264b]">
+      <h3 className="mb-4 text-xl font-bold text-black">
         {technology.title}
       </h3>
 
@@ -64,7 +64,7 @@ const TechnologySectionCard = ({ technology, variants }) => {
             key={point}
             className="flex items-center gap-3 text-sm font-medium text-gray-500"
           >
-            <span className="h-2 w-2 shrink-0 rounded-full bg-sky-500" />
+            <span className="h-2 w-2 shrink-0 rounded-full bg-[#0081CD]" />
 
             <span>{point}</span>
           </div>
@@ -72,7 +72,7 @@ const TechnologySectionCard = ({ technology, variants }) => {
       </div>
 
       {/* Bottom Line */}
-      <div className="mt-7 h-[2px] w-10 bg-sky-500 transition-all duration-300 group-hover:w-full" />
+      <div className="mt-7 h-[2px] w-10 bg-[#0081CD] transition-all duration-300 group-hover:w-full" />
     </motion.div>
   );
 };

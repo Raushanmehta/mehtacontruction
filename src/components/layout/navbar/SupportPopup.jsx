@@ -27,9 +27,7 @@ export default function SupportPopup({ isOpen, onClose }) {
             <div className="grid grid-cols-2 gap-24 w-full">
               {/* Left */}
               <div>
-                <h1 className="text-6xl font-semibold mb-10">
-                  Our Service
-                </h1>
+                <h1 className="text-6xl font-semibold mb-10">Our Service</h1>
 
                 <h2 className="text-2xl font-semibold mb-4">
                   General Enquiries
@@ -43,8 +41,6 @@ export default function SupportPopup({ isOpen, onClose }) {
                   <p>INDIA: +91-9304137746</p>
                   <p>Email: mehtacontruction@gmail.com</p>
                   <p>Address:Patna city, Bihar 800008 </p>
-
-
                 </div>
               </div>
 
@@ -77,6 +73,12 @@ export default function SupportPopup({ isOpen, onClose }) {
               </div>
             </div>
           </div>
+
+          <img
+            className="pointer-events-none absolute bottom-0 right-0 w-64 opacity-20 sm:w-80 md:w-[28rem]"
+            src="https://img.magnific.com/free-vector/watercolor-house-plants-illustration_23-2150230733.jpg?semt=ais_hybrid&w=740&q=80"
+            alt="Mehta Construction"
+          />
         </motion.div>
       )}
     </AnimatePresence>

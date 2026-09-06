@@ -4,7 +4,7 @@ import { Separator } from "../ui/separator";
 
 const ServiceMenu = () => {
   return (
-    <ScrollArea className="bg-orange-50 backdrop-blur-xl shadow-2xl lg:h-auto w-full 
+    <ScrollArea className="bg-white backdrop-blur-xl shadow-2xl lg:h-auto w-full
     border border-white/10 sticky top-0 rounded-b-2xl overflow-hidden">
       <div className="flex flex-wrap text-sm ">
             jdsbfjdfj
@@ -17,7 +17,7 @@ const ServiceMenu = () => {
           <div
             key={parent.categoryId}
             className={`p-6 lg:w-[20%] transition-colors duration-200 
-            ${index % 2 === 0 ? "bg-orange-50" : "bg-orange-200"}`}
+            ${index % 2 === 0 ? "bg-white" : "bg-[#0081CD]/10"}`}
           >
 
            
@@ -37,7 +37,7 @@ const ServiceMenu = () => {
                   key={child.categoryId}
                   onClick={() => handleNavigate(child.categoryId)}
                   className="cursor-pointer text-black
-                   hover:text-orange-400 transition-colors"
+                   hover:text-[#0081CD] transition-colors"
                 >
                   {child.name}
                 </li>

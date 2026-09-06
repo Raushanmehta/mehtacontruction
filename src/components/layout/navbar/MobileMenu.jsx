@@ -61,7 +61,7 @@ export default function MobileMenu() {
 
                 <button
                   onClick={() => setOpen(false)}
-                  className="hover:text-sky-500 transition"
+                  className="hover:text-[#0081CD] transition"
                 >
                   <X size={28} />
                 </button>
@@ -81,7 +81,7 @@ export default function MobileMenu() {
                       <>
                         <button
                           onClick={() => toggleMenu(item.title)}
-                          className="w-full flex items-center justify-between py-4 text-left font-medium text-slate-700 hover:text-sky-500 transition"
+                          className="w-full flex items-center justify-between py-4 text-left font-medium text-slate-700 hover:text-[#0081CD] transition"
                         >
                           <span>{item.title}</span>
 
@@ -106,7 +106,7 @@ export default function MobileMenu() {
                                   key={subItem.title}
                                   to={subItem.href}
                                   onClick={() => setOpen(false)}
-                                  className="block py-3 border-l-2 border-sky-500 pl-4 hover:bg-slate-50 rounded-md transition"
+                                  className="block py-3 border-l-2 border-[#0081CD] pl-4 hover:bg-slate-50 rounded-md transition"
                                 >
                                   <h4 className="font-medium text-slate-700">
                                     {subItem.title}
@@ -125,7 +125,7 @@ export default function MobileMenu() {
                       <Link
                         to={item.href}
                         onClick={() => setOpen(false)}
-                        className="block py-4 font-medium text-slate-700 hover:text-sky-500 transition"
+                        className="block py-4 font-medium text-slate-700 hover:text-[#0081CD] transition"
                       >
                         {item.title}
                       </Link>
@@ -137,7 +137,7 @@ export default function MobileMenu() {
                 <Link
                   to="/contact"
                   onClick={() => setOpen(false)}
-                  className="mt-8 flex items-center justify-center gap-2 rounded-full bg-sky-500 hover:bg-sky-600 text-white py-3 font-semibold transition"
+                  className="mt-8 flex items-center justify-center gap-2 rounded-full bg-[#0081CD] hover:bg-black text-white py-3 font-semibold transition"
                 >
                   Contact Us
                   <ArrowRight size={18} />
@@ -160,19 +160,19 @@ export default function MobileMenu() {
                 </div>
 
                 <div className="flex justify-center gap-5 text-2xl mt-10">
-                  <a href="#" className="hover:text-sky-500 transition">
+                  <a href="#" className="hover:text-[#0081CD] transition">
                     <FaFacebook />
                   </a>
 
-                  <a href="#" className="hover:text-pink-500 transition">
+                  <a href="#" className="hover:text-[#0081CD] transition">
                     <FaInstagram />
                   </a>
 
-                  <a href="#" className="hover:text-sky-400 transition">
+                  <a href="#" className="hover:text-[#0081CD] transition">
                     <FaTwitter />
                   </a>
 
-                  <a href="#" className="hover:text-blue-700 transition">
+                  <a href="#" className="hover:text-[#0081CD] transition">
                     <FaLinkedinIn />
                   </a>
 
@@ -180,7 +180,7 @@ export default function MobileMenu() {
                     href="https://wa.me/919304137746"
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-green-500 transition"
+                    className="hover:text-[#0081CD] transition"
                   >
                     <FaWhatsapp />
                   </a>

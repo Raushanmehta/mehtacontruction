@@ -30,7 +30,7 @@ export default function NavMenu() {
           {item.megaMenu ? (
             <>
               {/* MENU BUTTON */}
-              <button className="flex items-center gap-1 uppercase text-[15px] font-medium hover:text-[#42E442] transition-colors">
+              <button className="flex items-center gap-1 uppercase text-[15px] font-medium hover:text-[#0081CD] transition-colors">
                 {item.title}
 
                 <motion.span
@@ -92,7 +92,7 @@ export default function NavMenu() {
                             to={subItem.href}
                             className="group"
                           >
-                            <h3 className="text-sm  text-gray-900 group-hover:text-[#42E442] transition-colors">
+                            <h3 className="text-sm  text-black group-hover:text-[#0081CD] transition-colors">
                               {subItem.title}
                             </h3>
                           </Link>
@@ -112,9 +112,9 @@ export default function NavMenu() {
                               onMouseEnter={() =>
                                 setHoveredItem(subItem)
                               }
-                              className="flex items-center gap-3  hover:bg-sky-100 transition-colors rounded-lg p-2"
+                              className="flex items-center gap-3  hover:bg-[#0081CD]/10 transition-colors rounded-lg p-2"
                             >
-                              <h3 className=" text-sm text-gray-900 group-hover:text-[#42E442] transition-colors">
+                              <h3 className=" text-sm text-black group-hover:text-[#0081CD] transition-colors">
                                 {subItem.title}
                               </h3>
                             </Link>
@@ -158,7 +158,7 @@ export default function NavMenu() {
           ) : (
             <Link
               to={item.href}
-              className="uppercase text-[15px] font-medium hover:text-[#42E442] transition-colors"
+              className="uppercase text-[15px] font-medium hover:text-[#0081CD] transition-colors"
             >
               {item.title}
             </Link>

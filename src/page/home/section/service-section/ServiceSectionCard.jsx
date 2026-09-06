@@ -19,7 +19,7 @@ const ServiceSectionCard = ({ services }) => {
               bg-white
               transition-all
              
-              hover:border-sky-500
+              hover:border-[#0081CD]
               
             "
           >
@@ -34,7 +34,7 @@ const ServiceSectionCard = ({ services }) => {
                 transition-all
                 duration-300
                 object-contain
-                group-hover:bg-sky-50
+                    group-hover:bg-[#0081CD]/10
               "
             >
               {/* Icon / Image */}
@@ -58,12 +58,12 @@ const ServiceSectionCard = ({ services }) => {
                     items-center
                     justify-center
                     rounded-2xl
-                    bg-sky-500
+                    bg-[#0081CD]
                     text-white
                     transition-all
                     duration-300
                     group-hover:scale-105
-                    group-hover:bg-sky-600
+                    group-hover:bg-black
                   "
                 >
                   <Icon size={38} strokeWidth={1.8} />
@@ -79,10 +79,10 @@ const ServiceSectionCard = ({ services }) => {
                   mb-3
                   text-xl
                   leading-7
-                  text-[#10264b]
+                  text-black
                   transition-colors
                   duration-300
-                  group-hover:text-sky-600
+                  group-hover:text-[#0081CD]
                   font-base
                 "
               >
@@ -113,11 +113,11 @@ const ServiceSectionCard = ({ services }) => {
                       py-1.5
                       text-[11px]
                       font-medium
-                      text-[#66758a]
+                      text-black
                       transition-colors
                       duration-300
-                      group-hover:bg-sky-50
-                      group-hover:text-sky-600
+                      group-hover:bg-[#0081CD]/10
+                      group-hover:text-[#0081CD]
                       sm:text-xs
                     "
                   >

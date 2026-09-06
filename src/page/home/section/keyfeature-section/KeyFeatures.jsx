@@ -67,7 +67,7 @@ const item = {
 
 export default function KeyFeatures() {
   return (
-    <section className="relative py-24 bg-white md:px-28">
+    <section className="relative py-24 bg-white py-14 sm:py-16 lg:py-20 md:px-28">
       {/* Gray Dot Background */}
       
 
@@ -85,7 +85,7 @@ export default function KeyFeatures() {
         className="absolute inset-0 opacity-60 "
         style={{
           backgroundImage:
-            "radial-gradient(circle, #d1d5db 1px, transparent 1px)",
+            "radial-gradient(circle, #0081CD 1px, transparent 1px)",
           backgroundSize: "16px 16px",
         }}
       ></div>
@@ -127,13 +127,13 @@ export default function KeyFeatures() {
                 className="flex items-start gap-4 group cursor-pointer"
               >
                 {/* Icon */}
-                <div className="w-12 h-12 min-w-[64px] min-h-[64px] rounded-full bg-[#3a3a3a] flex items-center justify-center transition-all duration-300 group-hover:bg-sky-500">
+                <div className="w-12 h-12 min-w-[64px] min-h-[64px] rounded-full bg-black flex items-center justify-center transition-all duration-300 group-hover:bg-[#0081CD]">
                   <Icon className="text-white text-3xl" />
                 </div>
 
                 {/* Content */}
                 <div>
-                  <h3 className="text-md font-bold text-slate-800 uppercase group-hover:text-sky-500 transition-colors duration-300">
+                  <h3 className="text-md font-bold text-slate-800 uppercase group-hover:text-[#0081CD] transition-colors duration-300">
                     {service.title}
                   </h3>
 

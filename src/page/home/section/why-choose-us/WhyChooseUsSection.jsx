@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import image from "@/page/home/section/whychooesus.png";
+const image = "/image/whychooesus.png";
 const features = [
   {
     id: "1",
@@ -44,9 +44,9 @@ const container = {
   },
 };
 
-export default function WhyChoose() {
+export default function WhyChooseUsSection() {
   return (
-    <section className="min-h-screen flex items-center py-20 bg-white overflow-hidden md:px-28">
+    <section className="min-h-screen bg-gray-50 flex items-center py-14 sm:py-16 lg:py-20 overflow-hidden md:px-28">
       <div className="max-w-7xl mx-auto px-6 w-full">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* LEFT IMAGE */}
@@ -80,14 +80,14 @@ export default function WhyChoose() {
               whileInView={{ width: 80 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="h-2 rounded-full bg-gradient-to-r from-blue-300 to-blue-600 mb-8"
+              className="h-2 rounded-full bg-[#0081CD] mb-8"
             />
 
             <motion.h2
               variants={fadeUp}
-              className="text-3xl lg:text-4xl font-bold text-slate-800 mb-2"
+              className="text-2xl lg:text-4xl font-bold text-slate-800 mb-2"
             >
-              Why Choose Mehta Construction?
+              Why Choose Us <br /> Mehta Construction?
             </motion.h2>
 
             <motion.p
@@ -108,16 +108,16 @@ export default function WhyChoose() {
               viewport={{ once: true }}
             >
               {/* Vertical Line */}
-              <div className="absolute left-5 top-5 bottom-5 w-[2px]  bg-gray-200"></div>
+              <div className="absolute left-4 top-5 bottom-5 w-[1.5px]  bg-gray-200"></div>
 
               {features.map((item) => (
                 <motion.div
                   key={item.id}
                   variants={fadeUp}
-                  className="relative flex gap-6 pb-8"
+                  className="relative flex gap-6 pb-2"
                 >
                   {/* Number */}
-                  <div className="w-10 h-10 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center font-bold text-sky-500 text-lg shrink-0 z-10">
+                  <div className="w-8 h-8 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center font-bold text-[#0081CD] text-lg shrink-0 z-10">
                     {item.id}
                   </div>
 
@@ -127,7 +127,7 @@ export default function WhyChoose() {
                       {item.title}
                     </h3>
 
-                    <p className="text-gray-500 text-base">
+                    <p className="text-gray-500 text-sm">
                       {item.desc}
                     </p>
                   </div>

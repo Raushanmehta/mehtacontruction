@@ -1,18 +1,18 @@
 import HeroSection from "./section/hero-section/HeroSection";
 import ServicesSection from "./section/service-section/ServicesSection";
-import StatsSection from "./section/StatsSection";
-import WhyChoose from "./section/WhyChoose";
+
 import KeyFeatures from "./section/keyfeature-section/KeyFeatures";
 import TechnologySection from "./section/technology-use-section/TechnologySection";
 import ProjectsSection from "./section/project-section/ProjectsSection";
+import WhyChooseUsSection from "./section/why-choose-us/WhyChooseUsSection";
 
-const Home = () => {
+export default function Home() {
   return (
     <div>
       <HeroSection/>
-      <StatsSection/>
+      {/* <StatsSection/> */}
       <ServicesSection/>
-      <WhyChoose/>
+      <WhyChooseUsSection/>
       <ProjectsSection/>
       <TechnologySection/>
       <KeyFeatures/>
@@ -20,4 +20,3 @@ const Home = () => {
   );
 };
 
-export default Home;

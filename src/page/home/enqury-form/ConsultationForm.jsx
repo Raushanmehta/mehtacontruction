@@ -104,12 +104,12 @@ const ConsultationForm = () => {
             items-center
             justify-center
             rounded-full
-            bg-[#10264b]
+            bg-black
             text-white
             shadow-lg
             transition-all
             duration-300
-            hover:bg-sky-500
+            hover:bg-[#0081CD]
             hover:scale-105
           "
           aria-label="Close consultation form"
@@ -137,7 +137,7 @@ const ConsultationForm = () => {
                 text-2xl
                 text-center
                 font-bold
-                text-[#10264b]
+                text-black
                 sm:text-[26px]
               "
             >
@@ -160,14 +160,14 @@ const ConsultationForm = () => {
               className="
                 h-[48px]
                 rounded-[5px]
-                border-[#10264b]
+                border-black
                 bg-white
                 px-6
                 text-[16px]
-                text-[#10264b]
+                text-black
                 placeholder:text-[#9aa6b8]
                 focus-visible:ring-1
-                focus-visible:ring-[#10264b]
+                focus-visible:ring-[#0081CD]
               "
             />
 
@@ -182,14 +182,14 @@ const ConsultationForm = () => {
               className="
                 h-[48px]
                 rounded-[5px]
-                border-[#10264b]
+                border-black
                 bg-white
                 px-6
                 text-[16px]
-                text-[#10264b]
+                text-black
                 placeholder:text-[#9aa6b8]
                 focus-visible:ring-1
-                focus-visible:ring-[#10264b]
+                focus-visible:ring-[#0081CD]
               "
             />
 
@@ -204,14 +204,14 @@ const ConsultationForm = () => {
                                h-[48px]
                 rounded-[5px]
                             
-                border-[#10264b]
+                border-black
                 bg-white
                 px-6
                 text-[16px]
-                text-[#10264b]
+                text-black
                 placeholder:text-[#9aa6b8]
                 focus-visible:ring-1
-                focus-visible:ring-[#10264b]
+                focus-visible:ring-[#0081CD]
               "
             />
 
@@ -224,14 +224,14 @@ const ConsultationForm = () => {
               className="
    h-[48px]
                 rounded-[5px]
-    border-[#10264b]
+    border-black
     bg-white
     px-6
     text-[16px]
-    text-[#10264b]
+    text-black
     placeholder:text-[#9aa6b8]
     focus-visible:ring-1
-    focus-visible:ring-[#10264b]
+    focus-visible:ring-[#0081CD]
   "
             />
 
@@ -245,15 +245,15 @@ const ConsultationForm = () => {
                 min-h-[60px]
                 resize-none
                 rounded-[5px]
-                border-[#10264b]
+                border-black
                 bg-white
                 px-6
                 py-5
                 text-[16px]
-                text-[#10264b]
+                text-black
                 placeholder:text-[#9aa6b8]
                 focus-visible:ring-1
-                focus-visible:ring-[#10264b]
+                focus-visible:ring-[#0081CD]
               "
             />
 
@@ -269,11 +269,11 @@ const ConsultationForm = () => {
                 font-bold
                 text-white
                 shadow-lg
-                shadow-[#d0a546]/20
+                shadow-[#0081CD]/20
                 transition-all
                 duration-300
                 hover:-translate-y-[1px]
-                hover:bg-sky-500
+                hover:bg-[#0081CD]
               "
             >
               LET'S BUILD YOUR DREAM
@@ -287,7 +287,7 @@ const ConsultationForm = () => {
                 justify-center
                 gap-2
                 text-sm
-                text-sky-500
+                text-[#0081CD]
               "
             >
               <LockKeyhole size={16} strokeWidth={1.8} />
