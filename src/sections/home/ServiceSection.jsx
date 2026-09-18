@@ -7,7 +7,7 @@ import {
   FileCheck2,
 } from "lucide-react";
 
-import ServiceSectionCard from "./ServiceSectionCard";
+import ServiceCard from "../../components/cards/ServiceCard";
 
 const services = [
   {
@@ -60,7 +60,7 @@ const services = [
   },
 ];
 
-const ServicesSection = () => {
+export default function ServiceSection() {
   return (
     <section className="relative bg-white py-14 sm:py-16 lg:py-20  md:px-26">
       <div className="relative mx-auto max-w-7xl px-6">
@@ -84,11 +84,11 @@ const ServicesSection = () => {
         </div>
 
         {/* Cards */}
-        <ServiceSectionCard services={services} />
+        <ServiceCard services={services} />
       </div>
     </section>
   );
 };
 
-export default ServicesSection;
+
 

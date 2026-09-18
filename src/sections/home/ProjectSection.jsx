@@ -10,8 +10,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import ProjectCard from "@/components/cards/ProjectCard";
 
-import ProjectSectionCard from "./ProjectSectionCard";
 
 const projects = [
   {
@@ -70,13 +70,15 @@ const projects = [
   },
 ];
 
-export default function ProjectsSection() {
-  const autoplay = React.useRef(
-    Autoplay({
-      delay: 3000,
-      stopOnInteraction: false,
-      stopOnMouseEnter: true,
-    })
+export default function ProjectSection() {
+  const autoplay = React.useMemo(
+    () =>
+      Autoplay({
+        delay: 3000,
+        stopOnInteraction: false,
+        stopOnMouseEnter: true,
+      }),
+    []
   );
 
   return (
@@ -84,20 +86,26 @@ export default function ProjectsSection() {
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
 
         {/* Heading */}
-        <div className="mb-10 text-center sm:mb-12">
+         <div className="mb-10 text-center sm:mb-14">
+          <p className="mb-2 text-sm uppercase tracking-[3px] text-[#0081CD]">
+            Our Projects
+          </p>
+
           <h2 className="text-2xl font-bold text-slate-800 md:text-4xl">
-            Recent Projects
+            Our Recent Projects
           </h2>
 
-          <p className="mx-auto mt-4 max-w-4xl text-sm font-semibold text-gray-500">
-            Explore our latest completed homes built with precision and care
-          </p>
+          <div className="mx-auto mt-4 h-[2px] w-16 bg-[#0081CD]" />
+
+          <p className="mx-auto mt-4 max-w-4xl text-sm  text-gray-800">
+           we capture the joy and care we provide to our furry friends          
+                      </p>
         </div>
 
         {/* Carousel */}
         <div className="relative px-2 sm:px-10">
           <Carousel
-            plugins={[autoplay.current]}
+            plugins={[autoplay]}
             opts={{
               align: "start",
               loop: true,
@@ -117,7 +125,7 @@ export default function ProjectsSection() {
                     xl:basis-1/4
                   "
                 >
-                  <ProjectSectionCard project={project} />
+                  <ProjectCard project={project} />
                 </CarouselItem>
               ))}
             </CarouselContent>

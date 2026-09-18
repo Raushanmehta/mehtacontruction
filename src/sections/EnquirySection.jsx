@@ -1,4 +1,4 @@
-import ConsultationForm from "./ConsultationForm";
+import ConsultationForm from "../components/form/ConsultationForm";
 
 const EnquirySection = () => {
   return (

@@ -11,25 +11,24 @@ export default function MainNavbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white shadow-sm h-20 flex items-center  lg:px-28">
-        <div className="max-w-7xl mx-auto w-full px-4 flex items-center justify-between">
+      <header className="sticky top-0 z-50 bg-white shadow-sm h-16 sm:h-20">
+        <div className="mx-auto flex h-full w-full max-w-[1400px] items-center justify-between gap-3 px-3 sm:px-4 lg:px-8 xl:px-12">
           <Logo />
 
           <div className="hidden lg:block">
             <NavMenu />
-            
           </div>
 
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden items-center gap-3 lg:flex lg:gap-8">
             <HireButton />
 
             <Grip
-              className="cursor-pointer text-black "
+              className="cursor-pointer text-black"
               onMouseEnter={() => setOpen(true)}
             />
           </div>
 
-          <div className="lg:hidden text-black">
+          <div className="flex items-center lg:hidden">
             <MobileMenu />
           </div>
         </div>

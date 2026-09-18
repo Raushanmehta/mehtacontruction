@@ -1,4 +1,4 @@
-import heroVideo from "@/page/home/section/hero-section/video.mp4";
+import heroVideo from "../../assets/video/video.mp4";
 
 const HeroSection = () => {
   return (

@@ -1,5 +1,5 @@
 
-const ServiceSectionCard = ({ services }) => {
+const ServiceCard = ({ services }) => {
   return (
     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {services.map((service, index) => {
@@ -133,4 +133,4 @@ const ServiceSectionCard = ({ services }) => {
   );
 };
 
-export default ServiceSectionCard;
+export default ServiceCard;
