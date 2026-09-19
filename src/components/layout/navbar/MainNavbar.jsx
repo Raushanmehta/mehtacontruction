@@ -11,7 +11,7 @@ export default function MainNavbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white shadow-sm h-16 sm:h-20">
+      <header className="sticky top-0 z-40 bg-white shadow-sm h-16 sm:h-20">
         <div className="mx-auto flex h-full w-full max-w-[1400px] items-center justify-between gap-3 px-3 sm:px-4 lg:px-8 xl:px-12">
           <Logo />
 
@@ -22,7 +22,7 @@ export default function MainNavbar() {
           <div className="hidden items-center gap-3 lg:flex lg:gap-8">
             <HireButton />
 
-            <Grip
+            <Grip size={28}
               className="cursor-pointer text-black"
               onMouseEnter={() => setOpen(true)}
             />

@@ -56,9 +56,8 @@ const FEATURES = [
 
 export default function FeatureSection() {
   return (
-    <section className="relative py-24 bg-white py-14 sm:py-16 lg:py-20 md:px-28">
-      {/* Gray Dot Background */}
-      <div className="relative max-w-7xl mx-auto px-6 ">
+    <section className="relative bg-white py-14 sm:py-16 lg:py-14 md:px-16">
+      <div className="relative mx-auto  max-w-[1350px] px-6">
         <div className="mb-10 text-center sm:mb-14">
           <p className="mb-2 text-sm uppercase tracking-[3px] text-[#0081CD]">
             Key Features

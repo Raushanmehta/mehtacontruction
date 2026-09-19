@@ -81,9 +81,8 @@ export default function ProcessSection() {
 
   return (
     <div className="w-full font-sans antialiased">
-      {/* Top Header Section */}
       <div className="bg-white border-b border-[#e5e5e5]">
-        <div className="mx-auto max-w-[1300px] px-5 pt-14 pb-0 sm:px-8">
+        <div className="mx-auto max-w-[1365px] px-5 pt-14 pb-0 sm:px-8">
           <h1 className="text-4xl font-bold text-[#1a0b3b] tracking-tight mb-12">
              Build With Technologies.
           </h1>

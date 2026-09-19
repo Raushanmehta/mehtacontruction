@@ -2,14 +2,12 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-
-
-const HireButton = React.forwardRef(({ text = "Contact us", className, ...props }, ref) => {
+const InteractiveHoverButton = React.forwardRef(({ text = "Button", className, ...props }, ref) => {
   return (
     <button
       ref={ref}
       className={cn(
-        "group relative w-32 cursor-pointer overflow-hidden rounded-full border border-black bg-white p-2 text-center font-semibold text-black transition-colors duration-300 hover:bg-black hover:text-white",
+        "group relative w-32 cursor-pointer overflow-hidden rounded-full border bg-background p-2 text-center font-semibold",
         className,
       )}
       {...props}
@@ -26,7 +24,7 @@ const HireButton = React.forwardRef(({ text = "Contact us", className, ...props 
   );
 });
 
-HireButton.displayName = "HireButton";
+InteractiveHoverButton.displayName = "InteractiveHoverButton";
 
-export { HireButton };
-export default HireButton;
+export { InteractiveHoverButton };
+
