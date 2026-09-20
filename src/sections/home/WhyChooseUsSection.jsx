@@ -1,142 +1,97 @@
-import { motion } from "framer-motion";
-const image = "/image/whychooesus.png";
-const features = [
-  {
-    id: "1",
-    title: "Expert Team",
-    desc: "A team of experienced professionals with over a decade of industry expertise.",
-  },
-  {
-    id: "2",
-    title: "End-to-End Solutions",
-    desc: "From concept to execution, we handle all your development, design, and marketing needs.",
-  },
-  {
-    id: "3",
-    title: "Proven Results",
-    desc: "Demonstrated success in driving growth, increasing conversions, and building strong digital brands.",
-  },
-];
 
-// Fade Up Animation
-const fadeUp = {
-  hidden: {
-    opacity: 0,
-    y: 60,
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: [0.25, 0.46, 0.45, 0.94],
-    },
-  },
-};
-
-// Stagger Animation
-const container = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
 
 export default function WhyChooseUsSection() {
-  return (
-    <section className="min-h-screen bg-gray-50 flex items-center py-14 sm:py-16 lg:py-20 overflow-hidden md:px-28">
-      <div className="max-w-7xl mx-auto px-6 w-full">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* LEFT IMAGE */}
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.3 }}
-            className="relative flex justify-center"
-          >
-            
-            {/* Image */}
-            <motion.img
-              src={image}
-              alt="Construction"
-              
-              className="relative z-10 w-64 sm:w-72 lg:w-80"
-            />
-          </motion.div>
+    const features = [
+        {
+            number: "01",
+            shapeBg: "bg-[#0ea5e9]", // Cyan / Teal accent shape
+            text: "And residence for met the estimable disposing. Mean if he they been no hold mr. Is at much do made took held help."
+        },
+        {
+            number: "02",
+            shapeBg: "bg-[#f97316]", // Orange accent shape
+            text: "Up maids me an ample stood given. Certainty say suffering his him collected intention promotion."
+        },
+        {
+            number: "03",
+            shapeBg: "bg-[#22c55e]", // Green accent shape
+            text: "Good draw knew bred ham busy his hour. Ask agreed answer rather joy nature admire wisdom."
+        }
+    ];
 
-          {/* RIGHT CONTENT */}
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            {/* Heading Line */}
-            <motion.div
-              initial={{ width: 0 }}
-              whileInView={{ width: 80 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="h-2 rounded-full bg-[#0081CD] mb-8"
-            />
+    return (
+        <section className="relative bg-white py-14 sm:py-16 lg:py-14 md:px-16">
+            <div className="relative mx-auto  max-w-[1350px] px-6">
+                
+                {/* ================= TOP ROW: INTRO & MAIN HEADING ================= */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+                    
+                    {/* Left Column: Intro Description & Explore Button */}
+                    <div className="lg:col-span-5 space-y-6">
+                        <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
+                            Blessing welcomed ladyship she met humoured sir breeding her. Six curiosity day assurance bed necessary.
+                        </p>
+                        <div>
+                            <button 
+                                onClick={() => alert("Explore clicked!")}
+                                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-gradient-to-r from-[#0ea5e9] to-[#0284c7] text-white font-medium text-sm shadow-lg shadow-cyan-500/25 hover:opacity-95 transition-all cursor-pointer"
+                            >
+                                Explore
+                            </button>
+                        </div>
+                    </div>
 
-            <motion.h2
-              variants={fadeUp}
-              className="text-2xl lg:text-4xl font-bold text-slate-800 mb-2"
-            >
-              Why Choose Us <br /> Mehta Construction?
-            </motion.h2>
+                    {/* Right Column: Main Heading */}
+                    <div className="lg:col-span-7">
+                        <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.2]">
+                            Why Choose us for best construction experience
+                        </h2>
+                    </div>
 
-            <motion.p
-              variants={fadeUp}
-              className="text-gray-500  mb-10 text-base lg:text-md"
-            >
-              Our process ensures a structured, transparent and collaborative
-              approach, allowing us to deliver high-quality solutions that meet
-              your business objectives.
-            </motion.p>
+                </div>
 
-            {/* Timeline */}
-            <motion.div
-              className="relative"
-              variants={container}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-            >
-              {/* Vertical Line */}
-              <div className="absolute left-4 top-5 bottom-5 w-[1.5px]  bg-gray-200"></div>
+                {/* ================= BOTTOM ROW: CURVED IMAGE & FEATURES ================= */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    {/* Left Column: Large Curved Construction Image */}
+                    <div className="lg:col-span-6 relative">
+                        <div className="relative h-[420px] sm:h-[500px] w-full rounded-tr-[140px] sm:rounded-tr-[200px] rounded-bl-3xl rounded-br-3xl overflow-hidden shadow-2xl bg-gray-900">
+                            <img
+                                src="https://i.pinimg.com/736x/96/9e/29/969e29466c4040aa181f7d80e6cac331.jpg" // Apni construction image ka path yahan dein
+                                alt="Construction site with skyscrapers and cranes"
+                                fill
+                                className="object-cover object-center"
+                            />
+                        </div>
+                    </div>
 
-              {features.map((item) => (
-                <motion.div
-                  key={item.id}
-                  variants={fadeUp}
-                  className="relative flex gap-6 pb-2"
-                >
-                  {/* Number */}
-                  <div className="w-8 h-8 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center font-bold text-[#0081CD] text-lg shrink-0 z-10">
-                    {item.id}
-                  </div>
+                    {/* Right Column: Numbered Features List */}
+                    <div className="lg:col-span-6 space-y-10 lg:pl-6">
+                        {features.map((item, index) => (
+                            <div key={index} className="flex items-start gap-6 group">
+                                
+                                {/* Number & Background Accent Shape */}
+                                <div className="relative flex items-center shrink-0">
+                                    <div className={`absolute -left-3 -top-3 h-10 w-10 rounded-tl-2xl rounded-br-2xl ${item.shapeBg} opacity-85 shadow-sm`} />
+                                    <span className="relative text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight z-10">
+                                        {item.number}
+                                    </span>
+                                </div>
 
-                  {/* Text */}
-                  <div>
-                    <h3 className="text-xl lg:text-xl font-semibold text-slate-800 mb-2">
-                      {item.title}
-                    </h3>
+                                {/* Description Text */}
+                                <div className="pt-1">
+                                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                                        {item.text}
+                                    </p>
+                                </div>
 
-                    <p className="text-gray-500 text-sm">
-                      {item.desc}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
+                            </div>
+                        ))}
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    );
 }
