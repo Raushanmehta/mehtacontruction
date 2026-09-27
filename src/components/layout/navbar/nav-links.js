@@ -1,5 +1,9 @@
 export const navLinks = [
   {
+    title: "Home",
+    href: "/",
+  },
+  {
     title: "Services",
     megaMenu: true,
     columns: 3,
@@ -38,46 +42,56 @@ export const navLinks = [
   },
 
   {
+    title: "Companies",
+    megaMenu: true,
+    columns: 1,
+    items: [
+      {
+        title: "Team",
+        href: "/team",
+      },
+      {
+        title: "Pricing",
+        href: "/Pricing",
+      },
+      {
+        title: "Gallery",
+        href: "/gallery",
+      },
+      {
+        title: "Why Choose us",
+        href: "/why-choose-us",
+      },
+      {
+        title: "Testimonial",
+        href: "/testimonial",
+      },
+      {
+        title: "Fqas",
+        href: "/Faqs",
+      },
+      {
+        title: "Safety",
+        href: "/safety",
+      },
+    ],
+  },
+  {
     title: "Projects",
     megaMenu: true,
     columns: 3,
     items: [
       {
-        title: "Commercial",
-        href: "/projects/commercial",
+        title: "Complete",
+        href: "/projects/complete",
         image: "/images/projects/commercial.jpg",
       },
       {
-        title: "Residential",
-        href: "/projects/residential",
-        image: "/images/projects/residential.jpg",
-      },
-      {
-        title: "Interior",
-        href: "/projects/interior",
-        image: "/images/projects/interior.jpg",
-      },
-      {
-        title: "Architecture",
-        href: "/projects/architecture",
-        image: "/images/projects/architecture.jpg",
-      },
-      {
-        title: "Renovation",
-        href: "/projects/renovation",
-        image: "/images/projects/renovation.jpg",
-      },
-      {
-        title: "Infrastructure",
-        href: "/projects/infrastructure",
-        image: "/images/projects/infrastructure.jpg",
+        title: "Progress",
+        href: "/projects/progress",
+        image: "/images/projects/progress.jpg",
       },
     ],
-  },
-
-  {
-    title: "Companies",
-    href: "/companies",
   },
 
   {
@@ -87,40 +101,7 @@ export const navLinks = [
 
   {
     title: "Team",
-    megaMenu: true,
-    columns: 1,
-    items: [
-      {
-        title: "Leadership",
-        href: "/team/leadership",
-        image: "/images/team/leadership.jpg",
-      },
-      {
-        title: "Engineers",
-        href: "/team/engineers",
-        image: "/images/team/engineers.jpg",
-      },
-      {
-        title: "Architects",
-        href: "/team/architects",
-        image: "/images/team/architects.jpg",
-      },
-      {
-        title: "Designers",
-        href: "/team/designers",
-        image: "/images/team/designers.jpg",
-      },
-      {
-        title: "Site Managers",
-        href: "/team/site-managers",
-        image: "/images/team/site-managers.jpg",
-      },
-      {
-        title: "Support",
-        href: "/team/support",
-        image: "/images/team/support.jpg",
-      },
-    ],
+    href: "/team",
   },
 
   {
