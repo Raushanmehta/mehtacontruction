@@ -161,3 +161,139 @@
   --warning: #0081CD;
   --danger: #000000;
 }
+
+.poem-scene {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: clamp(360px, 56.25vw, 760px);
+  overflow: hidden;
+  background: #111;
+}
+
+.poem-scene__background {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.poem-scene__figures {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: auto;
+  height: 88%;
+  max-width: 82%;
+  object-fit: contain;
+  object-position: center bottom;
+  transform: translateX(-50%);
+}
+
+.poem-scene__color-wash {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background-color: #f00028;
+  mix-blend-mode: color;
+  opacity: 0.82;
+  pointer-events: none;
+  animation: poem-scene-rgb-colors 30s linear infinite;
+}
+
+.poem-scene__poem {
+  position: absolute;
+  z-index: 2;
+  top: 52%;
+  left: 0;
+  width: max-content;
+  max-width: none;
+  color: #fff;
+  font-family: "Geist Variable", sans-serif;
+  font-size: clamp(2.25rem, 7vw, 5.75rem);
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+  -webkit-box-reflect: below 6px linear-gradient(
+    to bottom,
+    rgb(255 255 255 / 30%),
+    transparent 72%
+  );
+  text-shadow:
+    0 0 3px rgb(255 255 255 / 95%),
+    0 0 12px rgb(255 255 255 / 85%),
+    0 0 30px rgb(213 240 255 / 75%),
+    0 3px 8px rgb(0 0 0 / 85%),
+    0 12px 14px rgb(0 0 0 / 70%),
+    0 22px 24px rgb(0 0 0 / 58%),
+    0 38px 34px rgb(0 0 0 / 48%),
+    0 54px 46px rgb(0 0 0 / 30%);
+  animation:
+    poem-scene-flow 26s linear infinite,
+    poem-scene-glow 2.8s ease-in-out infinite alternate;
+}
+
+.poem-scene__poem span {
+  display: block;
+  padding-inline: 1rem;
+}
+
+@keyframes poem-scene-rgb-colors {
+  0% {
+    background-color: #f00028;
+  }
+
+  33.33% {
+    background-color: #00d957;
+  }
+
+  66.67% {
+    background-color: #075bff;
+  }
+
+  100% {
+    background-color: #f00028;
+  }
+}
+
+@keyframes poem-scene-flow {
+  from {
+    transform: translateX(100vw);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes poem-scene-glow {
+  from {
+    filter: brightness(0.94);
+  }
+
+  to {
+    filter: brightness(1.14);
+  }
+}
+
+@media (max-width: 640px) {
+  .poem-scene {
+    height: 440px;
+  }
+
+  .poem-scene__figures {
+    height: 78%;
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .poem-scene__color-wash,
+  .poem-scene__poem {
+    animation: none;
+  }
+}
