@@ -6,7 +6,56 @@ export const navLinks = [
   {
     title: "Services",
     megaMenu: true,
-    columns: 3,
+    intro: "Get software development services, built around your needs:",
+    highlights: [
+      "Strategy to Delivery",
+      "AI and Automation",
+      "Product Engineering",
+      "Dedicated Teams",
+    ],
+    serviceGroups: [
+      {
+        title: "Software Development",
+        href: "/services/software-development",
+        items: [
+          "IT Consulting",
+          "SaaS Development",
+          "Product Development",
+          "MVP Development",
+          "ERP Software",
+          "UX/UI Design",
+          "Product Design",
+          "Dedicated Team",
+        ],
+      },
+      {
+        title: "Web Development",
+        href: "/services/web-development",
+        items: [
+          "Web Applications",
+          "Web Portals",
+          "Marketplaces",
+          "Progressive Web Apps",
+          "Corporate Websites",
+          "Single Page Application",
+          "Web Design Services",
+          "Front-End Development",
+        ],
+      },
+      {
+        title: "Mobile App Development",
+        href: "/services/mobile-app",
+        items: [
+          "iOS App",
+          "Android App",
+          "Cross-platform",
+          "Flutter",
+          "Mobile App Design",
+          "AR/VR App Development",
+          "Wearable Solutions",
+        ],
+      },
+    ],
     items: [
       {
         title: "Web Development",

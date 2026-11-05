@@ -1,4 +1,4 @@
-import PageTopSection from "@/components/common/PageTopSection";
+import PageTopSection from "@/components/common/Breadrumb";
 
 export default function ContactPage() {
   return (

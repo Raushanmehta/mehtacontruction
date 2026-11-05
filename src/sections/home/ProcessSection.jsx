@@ -1,6 +1,7 @@
 import * as React from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
 
 const steps = [
   {
@@ -83,7 +84,7 @@ export default function ProcessSection() {
     <div className="w-full font-sans antialiased">
       <div className="bg-white border-b border-[#e5e5e5]">
         <div className="mx-auto max-w-[1365px] px-5 pt-14 pb-0 sm:px-8">
-          <h1 className="text-4xl font-bold text-[#1a0b3b] tracking-tight mb-12">
+          <h1 className="text-4xl font-bold text-[#000000] tracking-tight mb-12">
              Build With Technologies.
           </h1>
 
@@ -92,12 +93,15 @@ export default function ProcessSection() {
             {steps.map((item, index) => {
               const isActive = current === index;
               return (
-                <button
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="lg"
                   key={item.step}
                   onClick={() => api?.scrollTo(index)}
-                  className={`relative text-left pt-3 pb-6 px-4 transition-all border-t-2 ${
+                  className={`relative h-auto w-full justify-start rounded-none px-4 pt-3 pb-6 text-left transition-all border-t-2 ${
                     isActive
-                      ? "border-[#1a0b3b] bg-gradient-to-b from-white to-[#FFF4EB]"
+                      ? "border-[#000000] bg-gradient-to-b from-white to-[#FFF1E8]"
                       : "border-transparent border-l border-[#e5e5e5] first:border-l-0"
                   }`}
                 >
@@ -105,7 +109,7 @@ export default function ProcessSection() {
                     <span
                       className={`inline-flex items-center justify-center w-7 h-7 rounded-full text-xs font-semibold ${
                         isActive
-                          ? "bg-[#1a0b3b] text-white"
+                          ? "bg-[#000000] text-white"
                           : "border border-[#767676] text-[#333333]"
                       }`}
                     >
@@ -113,13 +117,13 @@ export default function ProcessSection() {
                     </span>
                     <span
                       className={`text-sm font-semibold leading-snug ${
-                        isActive ? "text-[#1a0b3b]" : "text-[#555555]"
+                        isActive ? "text-[#000000]" : "text-[#555555]"
                       }`}
                     >
                       {item.navTitle}
                     </span>
                   </div>
-                </button>
+                </Button>
               );
             })}
           </div>
@@ -127,7 +131,7 @@ export default function ProcessSection() {
       </div>
 
       {/* Carousel Body Section */}
-      <div className="w-full bg-gradient-to-b from-[#FFF4EB] to-white">
+      <div className="w-full bg-gradient-to-b from-[#FFF1E8] to-white">
         <div className="mx-auto max-w-[1300px] px-5 py-16 sm:px-8">
           <Carousel setApi={setApi} className="w-full">
             <CarouselContent>
@@ -135,12 +139,12 @@ export default function ProcessSection() {
                 <CarouselItem key={item.step}>
                   <div className="min-h-[280px] flex flex-col justify-between">
                   <div className="space-y-6">
-                    <h2 className="text-3xl font-semibold text-[#1a0b3b] max-w-3xl leading-snug">
+                    <h2 className="text-3xl font-semibold text-[#000000] max-w-3xl leading-snug">
                       {item.headline}
                     </h2>
 
                     <div className="space-y-4 pt-2">
-                      <h3 className="text-base font-bold text-[#1a0b3b]">
+                      <h3 className="text-base font-bold text-[#000000]">
                         {item.subheading}
                       </h3>
 
@@ -165,37 +169,45 @@ export default function ProcessSection() {
                   {/* Bottom Actions Bar */}
                   <div className="flex items-center justify-between pt-12">
                     <div className="flex items-center gap-6">
-                      <a
-                        href="#faqs"
-                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1a0b3b] hover:underline"
+                      <Button
+                        render={<a href="#faqs" />}
+                        variant="link"
+                        size="sm"
+                        className="h-auto gap-1.5 px-0 text-sm font-semibold text-[#000000] hover:underline"
                       >
                         View FAQs <ArrowRight className="w-3.5 h-3.5" />
-                      </a>
+                      </Button>
 
-                      <button className="inline-flex items-center gap-2 border border-[#1a0b3b] text-[#1a0b3b] rounded-full px-6 py-2.5 text-sm font-semibold hover:bg-[#1a0b3b] hover:text-white transition-colors">
+                      <Button type="button" variant="cta" size="lg" className="h-auto rounded-full px-6 py-2.5 text-sm">
                         {item.actionBtnText}
                         <ArrowRight className="w-4 h-4" />
-                      </button>
+                      </Button>
                     </div>
 
                     {/* Shadcn Arrow Controls */}
                     <div className="flex items-center gap-4">
-                      <button
+                      <Button
+                        type="button"
                         onClick={() => api?.scrollPrev()}
                         disabled={!api?.canScrollPrev()}
                         aria-label="Previous step"
-                        className="text-[#999999] hover:text-[#1a0b3b] disabled:opacity-40 disabled:pointer-events-none transition-colors"
+                        variant="ghost"
+                        size="icon-lg"
+                        className="text-[#999999] hover:text-[#FF6118]"
                       >
                         <ArrowLeft className="w-6 h-6" />
-                      </button>
-                      <button
+                      </Button>
+                      <Button
+                        type="button"
                         onClick={() => api?.scrollNext()}
                         disabled={!api?.canScrollNext()}
                         aria-label="Next step"
-                        className="text-[#1a0b3b] hover:text-[#000] disabled:opacity-40 disabled:pointer-events-none transition-colors"
+                        variant="ghost"
+                        size="icon-lg"
+                        className="text-[#000000] hover:text-[#FF6118]"
                       >
                         <ArrowRight className="w-6 h-6" />
-                      </button>
+                      </Button>
                     </div>
                   </div>
                   </div>

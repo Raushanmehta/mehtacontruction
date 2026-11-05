@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 /* ------------------------------------------------------------------ */
 /*  Photo shape                                                        */
 /*  A 516 × 472 box with the top-left corner stepped in. Each point is */
@@ -120,20 +122,19 @@ export default function AboutSection() {
     <section className="relative bg-white py-14 sm:py-16 lg:py-14  md:px-16">
         <style>{`@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");`}</style>
 
-        {/* Soft blue wash: strongest bottom-left, fading out towards the photo */}
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(to_bottom,rgba(237,243,252,0)_0%,#edf3fc_100%)] [-webkit-mask-image:linear-gradient(to_right,#000_25%,transparent_55%)] [mask-image:linear-gradient(to_right,#000_25%,transparent_55%)]" />
+        {/* Soft orange wash: strongest bottom-left, fading out towards the photo */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(to_bottom,rgba(255,97,24,0)_0%,#fff1e8_100%)] [-webkit-mask-image:linear-gradient(to_right,#000_25%,transparent_55%)] [mask-image:linear-gradient(to_right,#000_25%,transparent_55%)]" />
 
         <div className="mx-auto grid max-w-5xl items-start gap-12   lg:grid-cols-[508fr_516fr] lg:gap-0 max-w-[1350px] px-6">
           {/* ---------------- Copy ---------------- */}
           <div className="pt-0.5">
-            <span className="inline-flex h-8 text-sm uppercase tracking-[3px]  items-center rounded-lg bg-black px-4  text-white">
-             About US
-      
-            </span>
+            <p className="mb-2 text-sm uppercase tracking-[3px] text-[#FF6118]">
+           About Us
+          </p>
 
             <h1 className="mt-7 leading-[1.475] text-[#181818]  text-2xl font-bold text-slate-800 md:text-4xl">
               A{" "}
-              <span className="bg-[linear-gradient(90deg,#1a6be0_0%,#1359bd_60%,#04275f_100%)] bg-clip-text text-transparent">
+              <span className="bg-[linear-gradient(90deg,#FF6118_0%,#FF6118_60%,#000000_100%)] bg-clip-text text-transparent">
                 Digital Creative
                 <br className="hidden lg:block" /> Agency
               </span>{" "}
@@ -148,18 +149,22 @@ export default function AboutSection() {
             </p>
 
             <div className="mt-7 flex flex-wrap gap-[18px]">
-              <a
-                href="#demo"
-                className="inline-flex h-11 items-center rounded-xl bg-[linear-gradient(90deg,#0565ea,#0d55b8)] px-[26px] text-sm font-medium text-white shadow-[0_4px_10px_-4px_rgba(5,102,234,0.35)] transition-[filter,transform] hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0565ea] active:translate-y-px"
+              <Button
+                render={<a href="#demo" />}
+                variant="cta"
+                size="lg"
+                className="h-11 rounded-xl px-[26px] text-sm shadow-[0_4px_10px_-4px_rgba(255,97,24,0.25)] hover:brightness-110"
               >
                 Book a demo
-              </a>
-              <a
-                href="#platform"
-                className="inline-flex h-11 items-center rounded-xl bg-white px-[26px] text-sm font-medium text-[#4a4d54] shadow-[0_2px_12px_rgba(16,24,40,0.06)] transition-shadow hover:shadow-[0_4px_16px_rgba(16,24,40,0.1)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0565ea]"
+              </Button>
+              <Button
+                render={<a href="#platform" />}
+                variant="outline"
+                size="lg"
+                className="h-11 rounded-xl px-[26px] text-sm text-[#4a4d54] shadow-[0_2px_12px_rgba(16,24,40,0.06)] transition-shadow hover:shadow-[0_4px_16px_rgba(16,24,40,0.1)]"
               >
                 Watch our platform
-              </a>
+              </Button>
             </div>
 
             <p className="mt-[45px] text-[13px] font-semibold leading-5 text-[#5c5f66]">

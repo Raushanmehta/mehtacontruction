@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function SupportPopup({ isOpen, onClose }) {
   return (
@@ -16,12 +17,16 @@ export default function SupportPopup({ isOpen, onClose }) {
           }}
         >
           {/* Close Button */}
-          <button
+          <Button
+            type="button"
             onClick={onClose}
-            className="absolute top-8 right-8 p-2 rounded-full hover:bg-gray-100"
+              variant="ghost"
+              size="icon-lg"
+              className="absolute top-8 right-8 rounded-full hover:bg-gray-100"
+              aria-label="Close support information"
           >
             <X size={28} />
-          </button>
+          </Button>
 
           <div className="max-w-6xl mx-auto h-screen flex items-center px-10">
             <div className="grid grid-cols-2 gap-24 w-full">

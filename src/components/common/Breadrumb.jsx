@@ -4,7 +4,7 @@ import { FiChevronRight } from "react-icons/fi";
 import { GradientBackground } from "../ui/bloom-field-grident";
 
 
-export default function PageTopSection({
+export default function Breadcrumb({
   title,
   breadcrumbs = [],
 }) {
@@ -25,8 +25,8 @@ export default function PageTopSection({
           alt="Background"
           className="h-full w-full object-cover object-center opacity-90 grayscale-[0.08] contrast-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/65 via-sky-100/35 to-sky-300/30" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.9),transparent_22%),radial-gradient(circle_at_left,rgba(125,211,252,0.28),transparent_30%)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/65 via-[#FF6118]/10 to-[#FF6118]/20" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.9),transparent_22%),radial-gradient(circle_at_left,rgba(255,97,24,0.12),transparent_30%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:26px_26px]" />
       </div>
 

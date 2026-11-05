@@ -10,9 +10,9 @@
   --bg: #ffffff;
   --border: #000000;
   --code-bg: #ffffff;
-  --accent: #0081CD;
-  --accent-bg: rgba(0, 129, 205, 0.1);
-  --accent-border: #0081CD;
+  --accent: #FF6118;
+  --accent-bg: rgba(255, 97, 24, 0.1);
+  --accent-border: #FF6118;
   --social-bg: #ffffff;
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
@@ -51,7 +51,7 @@
 
   --primary-foreground: #ffffff;
 
-  --secondary: #0081CD;
+  --secondary: #FF6118;
 
   --secondary-foreground: #000000;
 
@@ -65,17 +65,17 @@
 
   --input: #000000;
 
-  --ring: #0081CD;
+  --ring: #FF6118;
 
-  --chart-1: #0081CD;
+  --chart-1: #FF6118;
 
   --chart-2: #000000;
 
-  --chart-3: #0081CD;
+  --chart-3: #FF6118;
 
   --chart-4: #000000;
 
-  --chart-5: #0081CD;
+  --chart-5: #FF6118;
 
   --radius: 0.625rem;
 
@@ -87,13 +87,13 @@
 
   --sidebar-primary-foreground: #ffffff;
 
-  --sidebar-accent: #0081CD;
+  --sidebar-accent: #FF6118;
 
   --sidebar-accent-foreground: #000000;
 
   --sidebar-border: #000000;
 
-  --sidebar-ring: #0081CD
+  --sidebar-ring: #FF6118
 }
 
 /* crasul  */
@@ -121,7 +121,7 @@
 .project-slider .slick-dots li.slick-active button:before {
   width: 30px;
   border-radius: 20px;
-  background: #0081CD;
+  background: #FF6118;
 }
 
 .project-slider .slick-dots li.slick-active {
@@ -141,9 +141,9 @@
  :root {
   /* Brand */
   --primary: #000000;
-  --secondary: #0081CD;
-  --accent: #0081CD;
-  --primary-hover: #0081CD;
+  --secondary: #FF6118;
+  --accent: #FF6118;
+  --primary-hover: #FF6118;
 
   /* Text */
   --text-primary: #000000;
@@ -157,8 +157,8 @@
 
   /* UI */
   --border: #000000;
-  --success: #0081CD;
-  --warning: #0081CD;
+  --success: #FF6118;
+  --warning: #FF6118;
   --danger: #000000;
 }
 

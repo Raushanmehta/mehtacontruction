@@ -68,7 +68,7 @@ export default function ProjectCard  ({ project })  {
           shadow-md
           ${
             isCompleted
-              ? "bg-[#0081CD]"
+              ? "bg-[#FF6118]"
               : "bg-black"
           }
         `}
@@ -103,7 +103,7 @@ export default function ProjectCard  ({ project })  {
         <div className="mt-4 flex items-start gap-3 text-sm text-gray-200">
           <MapPin
             size={18}
-            className="mt-0.5 shrink-0 text-[#0081CD]"
+            className="mt-0.5 shrink-0 text-[#FF6118]"
           />
 
           <span>{project.location}</span>
@@ -113,7 +113,7 @@ export default function ProjectCard  ({ project })  {
         <div className="mt-3 flex items-center gap-3 text-sm text-gray-200">
           <Ruler
             size={18}
-            className="shrink-0 text-[#0081CD]"
+            className="shrink-0 text-[#FF6118]"
           />
 
           <span>Plot Area : {project.plotArea}</span>
@@ -123,7 +123,7 @@ export default function ProjectCard  ({ project })  {
         <div className="mt-3 flex items-center gap-3 text-sm text-gray-200">
           <House
             size={18}
-            className="shrink-0 text-[#0081CD]"
+            className="shrink-0 text-[#FF6118]"
           />
 
           <span>

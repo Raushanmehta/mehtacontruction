@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   FaFacebook,
   FaInstagram,
@@ -36,7 +37,7 @@ const socialLinks = [
   },
 ];
 
-export default function ContactSidebar({ open, onClose }) {
+export default function ContactSidebar({ open, onClose, onOpen }) {
   return (
     <AnimatePresence>
       {open && (
@@ -64,9 +65,9 @@ export default function ContactSidebar({ open, onClose }) {
             onMouseEnter={() => onOpen?.()} // optional
             onMouseLeave={onClose}
           >
-            <button onClick={onClose} className="absolute top-6 right-6">
+            <Button type="button" onClick={onClose} variant="ghost" size="icon-lg" className="absolute top-6 right-6" aria-label="Close contact sidebar">
               <X size={28} />
-            </button>
+            </Button>
 
             <div className="p-12">
               <img
@@ -75,7 +76,7 @@ export default function ContactSidebar({ open, onClose }) {
                 alt=""
               />
 
-              <h2 className="text-4xl py-4 text-black hover:text-[#0081CD]"><a href="/contact">Contact Us</a></h2>
+              <h2 className="text-4xl py-4 text-black hover:text-[#FF6118]"><a href="/contact">Contact Us</a></h2>
 
               <p className="text-gray-500 text-sm mb-8 text-gray-800">
                 Our friendly and knowledgeable staff is waiting to hear from
@@ -99,7 +100,7 @@ export default function ContactSidebar({ open, onClose }) {
                   <h3 className="text-2xl font-semibold mt-2 text-gray-800">
                     <a
                       href="mailto:info@mehtaconstruction.in"
-                      className="transition-colors hover:text-[#0081CD]"
+                      className="transition-colors hover:text-[#FF6118]"
                     >
                       info@mehtacontructuion.in
                     </a>
@@ -114,7 +115,7 @@ export default function ContactSidebar({ open, onClose }) {
                   <h3 className="text-2xl font-semibold mt-2 text-gray-800">
                     <a
                       href="tel:+919304137746"
-                      className="transition-colors hover:text-[#0081CD]"
+                      className="text-[#FF6118] transition-colors hover:text-black"
                     >
                       +91 9304137746
                     </a>
@@ -134,7 +135,7 @@ export default function ContactSidebar({ open, onClose }) {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={name}
-                        className="transition-all duration-200 hover:-translate-y-1 hover:text-[#0081CD]"
+                        className="transition-all duration-200 hover:-translate-y-1 hover:text-[#FF6118]"
                       >
                         <Icon />
                       </a>

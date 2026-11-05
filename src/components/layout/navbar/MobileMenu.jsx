@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 
 import { navLinks } from "./nav-links";
+import { Button } from "@/components/ui/button";
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
@@ -23,10 +24,16 @@ export default function MobileMenu() {
   return (
     <>
       {/* Menu Button */}
-      <button onClick={() => setOpen(true)} className="lg:hidden p-2">
+      <Button
+        type="button"
+        variant="ghost"
+        size="icon-lg"
+        onClick={() => setOpen(true)}
+        className="lg:hidden p-2"
+        aria-label="Open menu"
+      >
         <Menu size={28} />
-      </button>
-
+      </Button>
       <AnimatePresence>
         {open && (
           <>
@@ -59,12 +66,16 @@ export default function MobileMenu() {
                   className="h-14 object-contain"
                 />
 
-                <button
+                <Button
+                  type="button"
                   onClick={() => setOpen(false)}
-                  className="hover:text-[#0081CD] transition"
+                    variant="ghost"
+                    size="icon-lg"
+                    className="hover:text-[#FF6118]"
+                    aria-label="Close menu"
                 >
                   <X size={28} />
-                </button>
+                </Button>
               </div>
 
               {/* Navigation */}
@@ -79,9 +90,12 @@ export default function MobileMenu() {
                   >
                     {item.megaMenu ? (
                       <>
-                        <button
+                        <Button
+                          type="button"
                           onClick={() => toggleMenu(item.title)}
-                          className="w-full flex items-center justify-between py-4 text-left font-medium text-slate-700 hover:text-[#0081CD] transition"
+                          variant="ghost"
+                          size="lg"
+                          className="h-auto w-full justify-between rounded-none px-0 py-4 text-left font-medium text-slate-700 hover:text-[#FF6118]"
                         >
                           <span>{item.title}</span>
 
@@ -90,7 +104,7 @@ export default function MobileMenu() {
                           ) : (
                             <ChevronDown size={18} />
                           )}
-                        </button>
+                        </Button>
 
                         <AnimatePresence>
                           {activeMenu === item.title && (
@@ -106,7 +120,7 @@ export default function MobileMenu() {
                                   key={subItem.title}
                                   to={subItem.href}
                                   onClick={() => setOpen(false)}
-                                  className="block py-3 border-l-2 border-[#0081CD] pl-4 hover:bg-slate-50 rounded-md transition"
+                                  className="block py-3 border-l-2 border-[#FF6118] pl-4 hover:bg-slate-50 rounded-md transition"
                                 >
                                   <h4 className="font-medium text-slate-700">
                                     {subItem.title}
@@ -125,7 +139,7 @@ export default function MobileMenu() {
                       <Link
                         to={item.href}
                         onClick={() => setOpen(false)}
-                        className="block py-4 font-medium text-slate-700 hover:text-[#0081CD] transition"
+                        className="block py-4 font-medium text-slate-700 hover:text-[#FF6118] transition"
                       >
                         {item.title}
                       </Link>
@@ -134,14 +148,16 @@ export default function MobileMenu() {
                 ))}
 
                 {/* Contact Button */}
-                <Link
-                  to="/contact"
+                <Button
+                  render={<Link to="/contact" />}
                   onClick={() => setOpen(false)}
-                  className="mt-8 flex items-center justify-center gap-2 rounded-full bg-[#0081CD] hover:bg-black text-white py-3 font-semibold transition"
+                  variant="cta"
+                  size="lg"
+                  className="mt-8 h-auto w-full rounded-full py-3"
                 >
                   Contact Us
                   <ArrowRight size={18} />
-                </Link>
+                </Button>
 
                 {/* Social Icons */}
 
@@ -160,19 +176,19 @@ export default function MobileMenu() {
                 </div>
 
                 <div className="flex justify-center gap-5 text-2xl mt-10">
-                  <a href="#" className="hover:text-[#0081CD] transition">
+                  <a href="#" className="hover:text-[#FF6118] transition">
                     <FaFacebook />
                   </a>
 
-                  <a href="#" className="hover:text-[#0081CD] transition">
+                  <a href="#" className="hover:text-[#FF6118] transition">
                     <FaInstagram />
                   </a>
 
-                  <a href="#" className="hover:text-[#0081CD] transition">
+                  <a href="#" className="hover:text-[#FF6118] transition">
                     <FaTwitter />
                   </a>
 
-                  <a href="#" className="hover:text-[#0081CD] transition">
+                  <a href="#" className="hover:text-[#FF6118] transition">
                     <FaLinkedinIn />
                   </a>
 
@@ -180,7 +196,7 @@ export default function MobileMenu() {
                     href="https://wa.me/919304137746"
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-[#0081CD] transition"
+                    className="hover:text-[#FF6118] transition"
                   >
                     <FaWhatsapp />
                   </a>

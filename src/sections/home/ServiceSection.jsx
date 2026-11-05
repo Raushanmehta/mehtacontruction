@@ -6,6 +6,7 @@ import {
   Hammer,
   FileCheck2,
 } from "lucide-react";
+import "@fontsource/anton";
 
 import ServiceCard from "../../components/cards/ServiceCard";
 
@@ -62,29 +63,31 @@ const services = [
 
 export default function ServiceSection() {
   return (
-    <section className="relative bg-white py-14 sm:py-16 lg:py-14  md:px-16">
+    <section className="relative bg-white py-14 sm:py-16 lg:py-14 md:px-16">
       <div className="relative mx-auto max-w-[1350px] px-6">
 
         {/* Heading */}
-        <div className="mb-10 text-center sm:mb-14">
-          <p className="mb-2 text-sm uppercase tracking-[3px] text-[#0081CD]">
-            What We Offer
+        <div className="text-center mb-6 lg:mb-8">
+          <p className="mb-2 text-sm uppercase tracking-[3px] text-[#FF6118]">
+           Our Services
           </p>
 
-          <h2 className="text-2xl font-bold text-slate-800 md:text-4xl">
-            Our Services
+          <h2 className="text-2xl uppercase font-normal text-black md:text-5xl" style={{ fontFamily: "Anton, sans-serif" }}>
+           We Specialize in Construction Solutions
           </h2>
 
-          <div className="mx-auto mt-4 h-[2px] w-16 bg-[#0081CD]" />
-
-          <p className="mx-auto mt-4 max-w-4xl text-sm  text-gray-800">
+          <p className="mx-auto mt-2 max-w-2xl text-md  text-gray-800">
             Comprehensive solutions tailored to bring your architectural
-            vision to life through quality construction.
+            vision to quality construction.
           </p>
         </div>
 
         {/* Cards */}
-        <ServiceCard services={services} />
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service) => (
+            <ServiceCard key={service.title} service={service} />
+          ))}
+        </div>
       </div>
     </section>
   );

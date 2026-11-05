@@ -1,20 +1,21 @@
 
+import { Button } from "@/components/ui/button";
 
 export default function WhyChooseUsSection() {
     const features = [
         {
             number: "01",
-            shapeBg: "bg-[#0ea5e9]", // Cyan / Teal accent shape
+            shapeBg: "bg-[#FF6118]", // Cyan / Teal accent shape
             text: "And residence for met the estimable disposing. Mean if he they been no hold mr. Is at much do made took held help."
         },
         {
             number: "02",
-            shapeBg: "bg-[#f97316]", // Orange accent shape
+            shapeBg: "bg-[#FF6118]", // Orange accent shape
             text: "Up maids me an ample stood given. Certainty say suffering his him collected intention promotion."
         },
         {
             number: "03",
-            shapeBg: "bg-[#22c55e]", // Green accent shape
+            shapeBg: "bg-[#000000]", // Green accent shape
             text: "Good draw knew bred ham busy his hour. Ask agreed answer rather joy nature admire wisdom."
         }
     ];
@@ -32,12 +33,15 @@ export default function WhyChooseUsSection() {
                             Blessing welcomed ladyship she met humoured sir breeding her. Six curiosity day assurance bed necessary.
                         </p>
                         <div>
-                            <button 
+                            <Button
+                                type="button"
                                 onClick={() => alert("Explore clicked!")}
-                                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-gradient-to-r from-[#0ea5e9] to-[#0284c7] text-white font-medium text-sm shadow-lg shadow-cyan-500/25 hover:opacity-95 transition-all cursor-pointer"
+                                variant="cta"
+                                size="lg"
+                                className="h-auto rounded-full px-8 py-3.5 text-sm shadow-lg shadow-black/10"
                             >
                                 Explore
-                            </button>
+                            </Button>
                         </div>
                     </div>
 

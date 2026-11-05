@@ -90,9 +90,11 @@ const ConsultationForm = () => {
         "
       >
         {/* Close Button */}
-        <button
+        <Button
           type="button"
           onClick={() => setIsOpen(false)}
+          variant="ghost"
+          size="icon-lg"
           className="
             absolute
             -right-2
@@ -109,13 +111,13 @@ const ConsultationForm = () => {
             shadow-lg
             transition-all
             duration-300
-            hover:bg-[#0081CD]
+            hover:bg-[#FF6118]
             hover:scale-105
           "
           aria-label="Close consultation form"
         >
           <X size={19} />
-        </button>
+        </Button>
 
         {/* Form Container */}
         <div
@@ -167,7 +169,7 @@ const ConsultationForm = () => {
                 text-black
                 placeholder:text-[#9aa6b8]
                 focus-visible:ring-1
-                focus-visible:ring-[#0081CD]
+                focus-visible:ring-[#FF6118]
               "
             />
 
@@ -189,7 +191,7 @@ const ConsultationForm = () => {
                 text-black
                 placeholder:text-[#9aa6b8]
                 focus-visible:ring-1
-                focus-visible:ring-[#0081CD]
+                focus-visible:ring-[#FF6118]
               "
             />
 
@@ -211,7 +213,7 @@ const ConsultationForm = () => {
                 text-black
                 placeholder:text-[#9aa6b8]
                 focus-visible:ring-1
-                focus-visible:ring-[#0081CD]
+                focus-visible:ring-[#FF6118]
               "
             />
 
@@ -231,7 +233,7 @@ const ConsultationForm = () => {
     text-black
     placeholder:text-[#9aa6b8]
     focus-visible:ring-1
-    focus-visible:ring-[#0081CD]
+    focus-visible:ring-[#FF6118]
   "
             />
 
@@ -253,7 +255,7 @@ const ConsultationForm = () => {
                 text-black
                 placeholder:text-[#9aa6b8]
                 focus-visible:ring-1
-                focus-visible:ring-[#0081CD]
+                focus-visible:ring-[#FF6118]
               "
             />
 
@@ -269,11 +271,11 @@ const ConsultationForm = () => {
                 font-bold
                 text-white
                 shadow-lg
-                shadow-[#0081CD]/20
+                shadow-[#FF6118]/20
                 transition-all
                 duration-300
                 hover:-translate-y-[1px]
-                hover:bg-[#0081CD]
+                hover:bg-[#FF6118]
               "
             >
               LET'S BUILD YOUR DREAM
@@ -287,7 +289,7 @@ const ConsultationForm = () => {
                 justify-center
                 gap-2
                 text-sm
-                text-[#0081CD]
+                text-[#FF6118]
               "
             >
               <LockKeyhole size={16} strokeWidth={1.8} />

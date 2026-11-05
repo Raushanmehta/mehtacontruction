@@ -1,14 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
-const topLogos = [
-  "https://www.webnx.in/wp-content/uploads/2024/03/iso-27001-1.png",
-  "https://www.webnx.in/wp-content/uploads/2024/03/ISO-9001.png",
-  "https://www.webnx.in/wp-content/uploads/2024/03/D-U-N-S.png",
-  "https://www.webnx.in/wp-content/uploads/2024/03/MSME.png",
-  "https://www.webnx.in/wp-content/uploads/2024/03/DGFT.png",
-  "https://www.webnx.in/wp-content/uploads/2024/03/DPIIT-Startup-1.png",
-];
+import { Button } from "@/components/ui/button";
 
 const footerLinks = [
   "Privacy Policy",
@@ -42,12 +34,14 @@ export default function Footer() {
               Call
             </p>
 
-            <a
-              href="tel:+911244396000"
-              className="text-[16px] tracking-[2px] text-gray-400 hover:text-white transition"
+              <Button
+                render={<a href="tel:+911244396000" />}
+                variant="cta"
+                size="lg"
+                className="h-auto rounded-full px-4 py-2 text-[16px] tracking-[2px]"
             >
               +91 124 4396 000
-            </a>
+              </Button>
           </div>
         </div>
 
@@ -132,28 +126,7 @@ export default function Footer() {
 
       {/* ================= CERTIFICATION LOGOS ================= */}
       <div className="">
-        {/* <motion.div
-          className="
-            grid
-            grid-cols-3
-            sm:grid-cols-6
-            lg:grid-cols-6
-            border-b
-            border-gray-700
-            gap-10
-            items-center
-            justify-items-center
-          "
-        >
-          {topLogos.map((logo, index) => (
-            <img
-              key={index}
-              src={logo}
-              alt="Certification"
-              className="h-20 sm:h-24 object-contain opacity-70 hover:opacity-100 transition"
-            />
-          ))}
-        </motion.div> */}
+        
 
         {/* ================= LEGAL LINKS ================= */}
         <motion.div
@@ -183,6 +156,47 @@ export default function Footer() {
             Universal Terms of Service
           </FooterLink>
           .
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 0.85, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative flex w-full select-none justify-center overflow-hidden pt-4 pb-2"
+        >
+          <svg
+            viewBox="0 0 1200 240"
+            className="pointer-events-none h-auto max-h-[190px] w-full select-none "
+            preserveAspectRatio="xMidYMid meet"
+            aria-hidden="true"
+          >
+            <defs>
+              <linearGradient id="footer-watermark-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#FF911F" />
+                <stop offset="100%" stopColor="#FF5B16" />
+              </linearGradient>
+              <filter id="footer-watermark-glow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="5" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            <text
+              x="50%"
+              y="78%"
+              textAnchor="middle"
+              fill="transparent"
+              stroke="url(#footer-watermark-gradient)"
+              strokeOpacity="0.9"
+              strokeWidth="2.2"
+              className="font-black tracking-[0.08em] text-[230px] font-sans"
+            >
+              MEHTACON
+            </text>
+          </svg>
         </motion.div>
       </div>
     </footer>

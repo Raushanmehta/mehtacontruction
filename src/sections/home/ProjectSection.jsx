@@ -86,20 +86,18 @@ export default function ProjectSection() {
       <div className="relative mx-auto max-w-[1350px] px-6">
 
         {/* Heading */}
-         <div className="mb-10 text-center sm:mb-14">
-          <p className="mb-2 text-sm uppercase tracking-[3px] text-[#0081CD]">
-            Our Projects
+        <div className="text-center mb-6 lg:mb-8">
+          <p className="mb-2 text-sm uppercase tracking-[3px] text-[#FF6118]">
+           Our Project
           </p>
 
-          <h2 className="text-2xl font-bold text-slate-800 md:text-4xl">
-            Our Recent Projects
+          <h2 className="text-2xl uppercase font-normal text-black md:text-5xl" style={{ fontFamily: "Anton, sans-serif" }}>
+           We Deliver Excellence in Every Project
           </h2>
 
-          <div className="mx-auto mt-4 h-[2px] w-16 bg-[#0081CD]" />
-
-          <p className="mx-auto mt-4 max-w-4xl text-sm  text-gray-800">
-           we capture the joy and care we provide to our furry friends          
-                      </p>
+          <p className="mx-auto mt-2 max-w-2xl text-md  text-gray-800">
+           Projects that reflect our commitment to quality, innovation, and client satisfaction.
+          </p>
         </div>
 
         {/* Carousel */}

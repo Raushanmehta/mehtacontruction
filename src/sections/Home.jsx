@@ -8,7 +8,8 @@ import FeatureSection from "./home/FeatureSection";
 import CtaBannerSection from "../components/common/CtaBannerSection";
 import ServicesSection from "./home/ServiceSection";
 import AboutSection from "./home/AboutSection";
-import { PoemAnimation } from "./PoemAnimation";
+import MissionSection from "./home/MissionSection";
+// import { PoemAnimation } from "./PoemAnimation";
 
 
 export default function Home() {
@@ -20,12 +21,13 @@ export default function Home() {
       <ServicesSection/>
       <WhyChooseUsSection/>
       <ProjectSection/>
-      <PoemAnimation
+      {/* <PoemAnimation
         poemText="Hand in hand, we build spaces where every new beginning can bloom."
         backgroundImageUrl="/image/studio.jpg"
         boyImageUrl="/image/object-image.png"
-      />
+      /> */}
       <ProcessSection/>
+      <MissionSection/>
       <FeatureSection/>
       <CtaBannerSection/>
       <GallerySection/>

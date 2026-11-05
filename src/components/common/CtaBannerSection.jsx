@@ -1,5 +1,6 @@
 
 import { ArrowRight, Play } from 'lucide-react';
+import { Button } from "@/components/ui/button";
 
 export default function CtaBannerSection() {
   return (
@@ -18,7 +19,7 @@ export default function CtaBannerSection() {
         />
        
         {/* Soft Light Blue Overlay (Left to Right Fade) */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-50/95 via-sky-20/85 " />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-[#FF6118]/10 " />
       </div>
 
       {/* Content Container */}
@@ -26,14 +27,14 @@ export default function CtaBannerSection() {
         <div className="max-w-xl space-y-6">
          
           {/* Pill Badge */}
-          <div className="inline-block px-3.5 py-1 bg-blue-100/80 text-blue-600 rounded-full text-[11px] md:text-xs font-semibold tracking-wider uppercase">
+          <div className="inline-block px-3.5 py-1 bg-[#FF6118]/10 text-[#FF6118] rounded-full text-[11px] md:text-xs font-semibold tracking-wider uppercase">
             Let's Grow Together
           </div>
 
           {/* Headline */}
-          <h2 className="text-3xl sm:text-3xl md:text-4xl font-black text-[#031535] leading-[1.15] tracking-tight">
+          <h2 className="text-3xl sm:text-3xl md:text-4xl font-black text-[#000000] leading-[1.15] tracking-tight">
             Ready to Grow Your Business with{' '}
-            <span className="text-blue-600">Digital Marketing?</span>
+            <span className="text-[#FF6118]">Digital Marketing?</span>
           </h2>
 
           {/* Subtitle / Description */}
@@ -45,25 +46,29 @@ export default function CtaBannerSection() {
           <div className="flex flex-wrap items-center gap-5 pt-2">
            
             {/* Primary Blue Button */}
-            <a
-              href="/consultation"
-              className="inline-flex items-center gap-2.5 bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white font-medium text-xs md:text-sm px-6 py-3.5 rounded-full shadow-lg shadow-blue-500/25 transition-all duration-300 hover:scale-105 group"
+            <Button
+              render={<a href="/consultation" />}
+              variant="cta"
+              size="cta"
+              className="group h-auto gap-2.5 py-3.5 text-xs shadow-lg shadow-black/10 transition-transform hover:scale-105 md:text-sm"
             >
               <span>Get a Free Consultation</span>
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </a>
+              <ArrowRight className="w-4 h-4 transition-transform group-hover/button:translate-x-1" />
+            </Button>
 
             {/* Play Video Trigger */}
-            <button
+            <Button
               type="button"
               onClick={() => alert('Video Player Modal Open')}
-              className="inline-flex items-center gap-3 text-[#031535] hover:text-blue-600 font-bold text-xs md:text-sm transition-colors group cursor-pointer"
+              variant="ghost"
+              size="lg"
+              className="h-auto gap-3 rounded-full px-0 text-[#000000] hover:text-[#FF6118] text-xs md:text-sm group"
             >
-              <div className="w-9 h-9 rounded-full border-2 border-blue-600 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-xs">
+              <div className="w-9 h-9 rounded-full border-2 border-[#FF6118] flex items-center justify-center text-[#FF6118] group-hover:bg-[#FF6118] group-hover:text-white transition-all shadow-xs">
                 <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
               </div>
               <span>Watch Our Video</span>
-            </button>
+            </Button>
 
           </div>
 

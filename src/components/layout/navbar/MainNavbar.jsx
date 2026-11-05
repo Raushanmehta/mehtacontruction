@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Grip } from "lucide-react";
 import Logo from "./Logo";
 import NavMenu from "./NavMenu";
-import HireButton from "./ContactButton";
+import HireButton from "./HireButton";
 import MobileMenu from "./MobileMenu";
 import ContactSidebar from "./ContactSidebar";
 

@@ -58,19 +58,19 @@ export default function FeatureSection() {
   return (
     <section className="relative bg-white py-14 sm:py-16 lg:py-14 md:px-16">
       <div className="relative mx-auto  max-w-[1350px] px-6">
-        <div className="mb-10 text-center sm:mb-14">
-          <p className="mb-2 text-sm uppercase tracking-[3px] text-[#0081CD]">
-            Key Features
+        
+           {/* Heading */}
+        <div className="text-center mb-6 lg:mb-8">
+          <p className="mb-2 text-sm uppercase tracking-[3px] text-[#FF6118]">
+           Key Features
           </p>
 
-          <h2 className="text-2xl font-bold text-slate-800 md:text-4xl">
-            Key Features
+          <h2 className="text-2xl uppercase font-normal text-black md:text-5xl" style={{ fontFamily: "Anton, sans-serif" }}>
+          Key Features of Our Construction Services
           </h2>
 
-          <div className="mx-auto mt-4 h-[2px] w-16 bg-[#0081CD]" />
-
-          <p className="mx-auto mt-4 max-w-4xl text-sm  text-gray-800">
-            we capture the joy and care we provide to our furry friends
+          <p className="mx-auto mt-2 max-w-2xl text-md  text-gray-800">
+            Discover the key features that set our construction services apart, ensuring quality, efficiency, and client satisfaction in every project we undertake.
           </p>
         </div>
 

@@ -1,11 +1,14 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 const InteractiveHoverButton = React.forwardRef(({ text = "Button", className, ...props }, ref) => {
   return (
-    <button
+    <Button
       ref={ref}
+      variant="outline"
+      size="lg"
       className={cn(
         "group relative w-32 cursor-pointer overflow-hidden rounded-full border bg-background p-2 text-center font-semibold",
         className,
@@ -20,7 +23,7 @@ const InteractiveHoverButton = React.forwardRef(({ text = "Button", className, .
         <ArrowRight />
       </div>
       <div className="absolute left-[20%] top-[40%] h-2 w-2 scale-[1] rounded-lg bg-primary transition-all duration-300 group-hover:left-[0%] group-hover:top-[0%] group-hover:h-full group-hover:w-full group-hover:scale-[1.8] group-hover:bg-primary"></div>
-    </button>
+    </Button>
   );
 });
 

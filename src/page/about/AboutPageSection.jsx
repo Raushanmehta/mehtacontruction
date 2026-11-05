@@ -1,5 +1,7 @@
 
 
+import { Button } from "@/components/ui/button";
+
 /* ------------------------------------------------------------------ */
 /*  Hero image shape                                                   */
 /*  A 960 × 384 box with a notch at the bottom-left, a raised tab at   */
@@ -48,7 +50,7 @@ const HERO_PATH = roundedPath(SHAPE);
 /* ------------------------------------------------------------------ */
 /*  Small pieces                                                       */
 /* ------------------------------------------------------------------ */
-const RED = "text-[#fb2c36]";
+const RED = "text-[#FF6118]";
 
 const Asterisk = () => (
   <svg
@@ -58,7 +60,7 @@ const Asterisk = () => (
   >
     <path
       d="M6 1v10M1 6h10M2.5 2.5l7 7M9.5 2.5l-7 7"
-      stroke="#fb2c36"
+      stroke="#FF6118"
       strokeWidth="1.4"
       strokeLinecap="round"
       fill="none"
@@ -70,7 +72,7 @@ const SocialLink = ({ label, href = "#", children }) => (
   <a
     href={href}
     aria-label={label}
-    className="grid h-[clamp(12px,2.3cqw,22px)] w-[clamp(12px,2.3cqw,22px)] place-items-center rounded-[5px] border border-[#e5e7eb] bg-white/60 p-[8%] transition-transform hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#006699]"
+    className="grid h-[clamp(12px,2.3cqw,22px)] w-[clamp(12px,2.3cqw,22px)] place-items-center rounded-[5px] border border-[#e5e7eb] bg-white/60 p-[8%] transition-transform hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF6118]"
   >
     {children}
   </a>
@@ -269,13 +271,15 @@ export default function AboutPageSection() {
               Ready to transform your brand&rsquo;s message into results?
             </p>
 
-            <a
-              href="#contact"
-              className="group mt-5 inline-flex w-fit items-center gap-2 rounded-lg bg-[#171717] px-5 py-3.5 text-[12px] font-bold uppercase leading-4 tracking-tight text-white shadow-[0_8px_16px_-4px_rgba(0,0,0,0.45)] transition-colors hover:bg-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#171717]"
+            <Button
+              render={<a href="#contact" />}
+              variant="cta"
+              size="lg"
+              className="group mt-5 h-auto w-fit rounded-lg px-5 py-3.5 text-[12px] leading-4 tracking-tight shadow-[0_8px_16px_-4px_rgba(0,0,0,0.25)]"
             >
               Let&rsquo;s collaborate
               <ArrowRight />
-            </a>
+            </Button>
           </aside>
         </div>
       </div>

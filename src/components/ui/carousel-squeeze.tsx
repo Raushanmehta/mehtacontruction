@@ -14,6 +14,7 @@ import {
 } from "react";
 
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 /* -------------------------------------------------------------------------- */
 /*                                   slides                                   */
@@ -417,7 +418,10 @@ export function SqueezeCarousel({
                         const front = col === 0;
 
                         return (
-                            <button
+                            <Button
+                                type="button"
+                                variant="ghost"
+                                size="lg"
                                 key={card.key}
                                 type="button"
                                 role="tab"
@@ -429,7 +433,7 @@ export function SqueezeCarousel({
                                 onMouseMove={() => hoverGrow && setHover(col)}
                                 onClick={() => col > 0 && step(col)}
                                 className={cn(
-                                    "relative isolate h-full shrink-0 cursor-pointer overflow-hidden bg-muted p-0",
+                                    "relative isolate h-full shrink-0 cursor-pointer overflow-hidden rounded-none bg-muted p-0",
                                     "outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
                                     "focus-visible:ring-[var(--sq-fill)] focus-visible:ring-offset-background",
                                     panelClassName,
@@ -464,7 +468,7 @@ export function SqueezeCarousel({
                                         {slide.overlay}
                                     </span>
                                 )}
-                            </button>
+                            </Button>
                         );
                     })}
                 </div>
@@ -553,8 +557,10 @@ function Arrow({
     onClick: () => void;
 }) {
     return (
-        <button
+        <Button
             type="button"
+            variant="ghost"
+            size="icon-lg"
             aria-label={label}
             onClick={onClick}
             className={cn(
@@ -574,7 +580,7 @@ function Arrow({
                     }
                 />
             </svg>
-        </button>
+        </Button>
     );
 }
 
@@ -612,23 +618,23 @@ function Action({ slide, shown }: { slide: SqueezeSlide; shown: boolean }) {
 
     if (slide.href) {
         return (
-            <a
-                href={slide.href}
-                target={slide.target}
-                rel={slide.target === "_blank" ? "noreferrer" : undefined}
+            <Button
+                render={<a href={slide.href} target={slide.target} rel={slide.target === "_blank" ? "noreferrer" : undefined} />}
+                variant="cta"
+                size="lg"
                 tabIndex={shown ? 0 : -1}
                 onClick={slide.onAction}
-                className={dress}
+                className={cn(dress, "h-auto")}
             >
                 {inside}
-            </a>
+            </Button>
         );
     }
 
     return (
-        <button type="button" tabIndex={shown ? 0 : -1} onClick={slide.onAction} className={dress}>
+        <Button type="button" variant="cta" size="lg" tabIndex={shown ? 0 : -1} onClick={slide.onAction} className={cn(dress, "h-auto")}>
             {inside}
-        </button>
+        </Button>
     );
 }
 
