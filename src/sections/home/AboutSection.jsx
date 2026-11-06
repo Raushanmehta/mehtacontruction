@@ -125,29 +125,38 @@ export default function AboutSection() {
         {/* Soft orange wash: strongest bottom-left, fading out towards the photo */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(to_bottom,rgba(255,97,24,0)_0%,#fff1e8_100%)] [-webkit-mask-image:linear-gradient(to_right,#000_25%,transparent_55%)] [mask-image:linear-gradient(to_right,#000_25%,transparent_55%)]" />
 
-        <div className="mx-auto grid max-w-5xl items-start gap-12   lg:grid-cols-[508fr_516fr] lg:gap-0 max-w-[1350px] px-6">
+        <div className="mx-auto grid max-w-5xl items-start gap-12  lg:grid-cols-[508fr_516fr] lg:gap-0 max-w-[1350px] px-6">
           {/* ---------------- Copy ---------------- */}
-          <div className="pt-0.5">
+          <div className="pt-0.5 space-y-3">
             <p className="mb-2 text-sm uppercase tracking-[3px] text-[#FF6118]">
            About Us
           </p>
 
-            <h1 className="mt-7 leading-[1.475] text-[#181818]  text-2xl font-bold text-slate-800 md:text-4xl">
+            <h1 className="text-2xl uppercase font-normal text-black md:text-5xl" style={{ fontFamily: "Anton, sans-serif" }}>
+          
               A{" "}
               <span className="bg-[linear-gradient(90deg,#FF6118_0%,#FF6118_60%,#000000_100%)] bg-clip-text text-transparent">
-                Digital Creative
+                Digital Creative Desigh 
                 <br className="hidden lg:block" /> Agency
               </span>{" "}
               from Denmark
             </h1>
 
-            <p className=" relative mx-auto  max-w-[1350px] px-6 text-sm leading-6 text-[#6b6d72]">
+            <p className=" relative mx-auto  max-w-[1350px]  text-sm leading-6 text-[#6b6d72]">
               Deploy, manage and troubleshoot cloud-native applications
               <br className="hidden lg:block" /> at scale without overwhelming
               your engineers with the
               <br className="hidden lg:block" /> complexity of Kubernetes.
             </p>
 
+ <p className=" relative mx-auto  max-w-[1350px]  text-sm leading-6 text-[#6b6d72]">
+              Deploy, manage and troubleshoot cloud-native applications
+              <br className="hidden lg:block" /> at scale without overwhelming
+              your engineers with the
+              <br className="hidden lg:block" /> complexity of Kubernetes.
+            </p>
+
+            
             <div className="mt-7 flex flex-wrap gap-[18px]">
               <Button
                 render={<a href="#demo" />}

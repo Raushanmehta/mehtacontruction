@@ -1,7 +1,7 @@
 import HeroSection from "./home/HeroSection";
 import WhyChooseUsSection from "./home/WhyChooseUsSection";
 import GallerySection from "./home/GallarySection";
-import StatsSection from "../components/common/StatsSection";
+// import StatsSection from "../components/common/StatsSection";
 import ProjectSection from "./home/ProjectSection";
 import ProcessSection from "./home/ProcessSection";
 import FeatureSection from "./home/FeatureSection";
@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <main>
       <HeroSection/>
-      <StatsSection/>
+      {/* <StatsSection/> */}
       <AboutSection/>
       <ServicesSection/>
       <WhyChooseUsSection/>

@@ -28,7 +28,7 @@ export default function WhyChooseUsSection() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
                     
                     {/* Left Column: Intro Description & Explore Button */}
-                    <div className="lg:col-span-5 space-y-6">
+                    <div className="lg:col-span-5 space-y-6 ">
                         <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
                             Blessing welcomed ladyship she met humoured sir breeding her. Six curiosity day assurance bed necessary.
                         </p>
@@ -47,9 +47,9 @@ export default function WhyChooseUsSection() {
 
                     {/* Right Column: Main Heading */}
                     <div className="lg:col-span-7">
-                        <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.2]">
-                            Why Choose us for best construction experience
-                        </h2>
+                         <h1 className="text-2xl uppercase font-normal text-black md:text-5xl" style={{ fontFamily: "Anton, sans-serif" }}>
+                            Why Choose us for best forever Design construction experience
+                        </h1>
                     </div>
 
                 </div>
