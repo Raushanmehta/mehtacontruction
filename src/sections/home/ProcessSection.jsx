@@ -82,11 +82,18 @@ export default function ProcessSection() {
 
   return (
     <div className="w-full font-sans antialiased">
-      <div className="bg-white border-b border-[#e5e5e5]">
+      <div className="bg-white">
         <div className="mx-auto max-w-[1365px] px-5 pt-14 pb-0 sm:px-8">
-          <h1 className="text-4xl font-bold text-[#000000] tracking-tight mb-12">
-             Build With Technologies.
-          </h1>
+          {/* Heading */}
+        <div className=" mb-6 lg:mb-8">
+          <p className="mb-2 text-sm uppercase tracking-[3px] text-[#FF6118]">
+           Our Process
+          </p>
+
+          <h2 className="text-2xl uppercase font-normal text-black md:text-5xl" style={{ fontFamily: "Anton, sans-serif" }}>
+           Buil with Technology and Innovation
+          </h2>
+        </div>
 
           {/* Stepper Navigation */}
           <div className="grid grid-cols-5 gap-0 ">
@@ -99,10 +106,10 @@ export default function ProcessSection() {
                   size="lg"
                   key={item.step}
                   onClick={() => api?.scrollTo(index)}
-                  className={`relative h-auto w-full justify-start rounded-none px-4 pt-3 pb-6 text-left transition-all border-t-2 ${
+                  className={`relative h-auto w-full justify-start rounded-none border-0 px-4 pt-3 pb-6 text-left transition-all ${
                     isActive
-                      ? "border-[#000000] bg-gradient-to-b from-white to-[#FFF1E8]"
-                      : "border-transparent border-l border-[#e5e5e5] first:border-l-0"
+                      ? " bg-gradient-to-b from-white to-[#FF6118] "
+                      : ""
                   }`}
                 >
                   <div className="flex flex-col gap-3">
@@ -110,7 +117,7 @@ export default function ProcessSection() {
                       className={`inline-flex items-center justify-center w-7 h-7 rounded-full text-xs font-semibold ${
                         isActive
                           ? "bg-[#000000] text-white"
-                          : "border border-[#767676] text-[#333333]"
+                          : "border border-[#FF6118] text-[#333333]"
                       }`}
                     >
                       {item.step}
@@ -131,7 +138,7 @@ export default function ProcessSection() {
       </div>
 
       {/* Carousel Body Section */}
-      <div className="w-full bg-gradient-to-b from-[#FFF1E8] to-white">
+      <div className="w-full bg-gradient-to-b from-[#FF6118] to-white">
         <div className="mx-auto max-w-[1300px] px-5 py-16 sm:px-8">
           <Carousel setApi={setApi} className="w-full">
             <CarouselContent>
