@@ -1,9 +1,10 @@
+import Breadcrumb from "@/components/common/Breadrumb";
+
 export default function GalleryPage() {  
 
     return (
-        <div>
-            <h1>Gallery Page</h1>
-            {/* Add your gallery content here */}
-        </div>
+        <main>
+              <Breadcrumb title="Gallery" breadcrumbs={[{ label: "Home", href: "/" }, { label: "Gallery" }]} />
+        </main>
     );
 }

@@ -1,9 +1,10 @@
+import Breadcrumb from "@/components/common/Breadrumb";
+
 export default function PricingPage() {  
 
     return (
-        <div>
-            <h1>Pricing Page</h1>
-            {/* Add your pricing content here */}
-        </div>
+        <main>
+              <Breadcrumb title="Pricing" breadcrumbs={[{ label: "Home", href: "/" }, { label: "Pricing" }]} />
+        </main>
     );
 }

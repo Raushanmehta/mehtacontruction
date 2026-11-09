@@ -1,9 +1,9 @@
-import PageTopSection from "@/components/common/Breadrumb";
+import Breadcrumb from "@/components/common/Breadrumb";
 
 export default function ContactPage() {
   return (
     <main>
-        <PageTopSection title="Contact Us" />
+         <Breadcrumb title="Contact Us" breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact Us" }]} />
     </main>
   )
 }
