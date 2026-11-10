@@ -9,6 +9,8 @@ export default function NavMenu() {
   const [openMenu, setOpenMenu] = useState(null);
   const [hoveredItem, setHoveredItem] = useState(null);
   const [serviceMenuLeft, setServiceMenuLeft] = useState(0);
+  const [serviceMenuWidth, setServiceMenuWidth] = useState(0);
+  const [menuLeft, setMenuLeft] = useState(0);
 
   return (
     <nav className="flex items-center gap-8 text-black ">
@@ -20,7 +22,22 @@ export default function NavMenu() {
             setOpenMenu(item.title);
 
             if (item.title === "Services") {
-              setServiceMenuLeft(-event.currentTarget.getBoundingClientRect().left);
+              const viewportWidth = document.documentElement.clientWidth;
+              const triggerLeft = event.currentTarget.getBoundingClientRect().left;
+
+              setServiceMenuLeft(-triggerLeft);
+              setServiceMenuWidth(viewportWidth);
+            } else if (item.megaMenu) {
+              const triggerLeft = event.currentTarget.getBoundingClientRect().left;
+              const menuWidth = item.columns === 1 ? 168 : 800;
+              const viewportWidth = document.documentElement.clientWidth;
+              const availableWidth = Math.min(menuWidth, viewportWidth - 32);
+              const viewportLeft = Math.max(
+                16,
+                Math.min(triggerLeft, viewportWidth - availableWidth - 16),
+              );
+
+              setMenuLeft(viewportLeft - triggerLeft);
             }
 
             // First child ki image default show hogi
@@ -58,14 +75,15 @@ export default function NavMenu() {
                     transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
                     style={{
                       transformOrigin: "top",
-                      ...(item.title === "Services" && { left: serviceMenuLeft }),
+                      left: item.title === "Services" ? serviceMenuLeft : menuLeft,
+                      ...(item.title === "Services" && { width: serviceMenuWidth }),
                     }}
                     className={`
                       absolute
-                      ${item.title === "Services" ? "w-screen p-0" : "left-0 p-4"}
+                      ${item.title === "Services" ? "p-0" : "max-w-[calc(100vw-2rem)] p-4"}
                       top-full
-                      mt-7
-                      bg-slate-50
+                      mt-[26px]
+                      border-t-1 border-gray-200 bg-white
                       shadow-lg
                       z-50
                       ${
@@ -78,9 +96,9 @@ export default function NavMenu() {
                     `}
                   >
                     {item.title === "Services" ? (
-                      <div className="w-full bg-[#f3f3f3] px-6 py-8 sm:px-8 lg:px-11 lg:py-10">
-                        <div className="mx-auto grid max-w-[1840px] grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[minmax(240px,325px)_repeat(3,minmax(0,1fr))] lg:gap-10">
-                          <aside className="rounded-[20px] bg-white p-6 sm:p-7">
+                      <div className="w-full bg-white px-6 py-8 sm:px-8 lg:px-11 lg:py-10">
+                        <div className="mx-auto grid max-w-[1300px] grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[minmax(240px,325px)_repeat(3,minmax(0,1fr))] lg:gap-10">
+                          <aside className="rounded-[20px] bg-[linear-gradient(145deg,#ffe5cf_0%,#fff5eb_52%,#ffd7b8_100%)] p-6 sm:p-7">
                             <p className="mb-6 max-w-[250px] text-base leading-6 text-[#555]">
                               {item.intro}
                             </p>
@@ -114,7 +132,7 @@ export default function NavMenu() {
                                   <li key={service}>
                                     <Link
                                       to={`${group.href}#${service.toLowerCase().replaceAll(/[^a-z0-9]+/g, "-").replaceAll(/(^-|-$)/g, "")}`}
-                                      className="block rounded-sm py-0.5 text-[15px] leading-6 text-black transition-colors hover:text-[#FF6118]"
+                                      className="block rounded-sm py-0.5 text-[15px] leading-6 text-black transition-colors hover:text-[#FF6118] font-medium"
                                     >
                                       {service}
                                     </Link>
@@ -136,7 +154,7 @@ export default function NavMenu() {
                             to={subItem.href}
                             className="group"
                           >
-                            <h3 className="text-sm  text-black group-hover:text-[#FF6118] transition-colors">
+                            <h3 className="text-sm font-medium text-black group-hover:text-[#FF6118] transition-colors">
                               {subItem.title}
                             </h3>
                           </Link>
@@ -146,9 +164,9 @@ export default function NavMenu() {
                       /* =========================
                          MEGA MENU
                       ========================== */
-                      <div className="flex gap-8">
+                      <div className="flex min-w-0 gap-4">
                         {/* LEFT - CHILDREN */}
-                        <div className="flex flex-col gap-x-6 gap-y-0">
+                        <div className="flex min-w-0 flex-col gap-x-6 gap-y-0">
                           {item.items.map((subItem) => (
                             <Link
                               key={subItem.title}
@@ -156,7 +174,7 @@ export default function NavMenu() {
                               onMouseEnter={() =>
                                 setHoveredItem(subItem)
                               }
-                              className="flex items-center gap-3  hover:bg-[#FF6118]/10 transition-colors rounded-lg p-2"
+                              className="flex items-center font-medium gap-3  hover:bg-[#FF6118]/10 transition-colors rounded-lg p-2"
                             >
                               <h3 className=" text-sm text-black group-hover:text-[#FF6118] transition-colors">
                                 {subItem.title}
@@ -166,7 +184,7 @@ export default function NavMenu() {
                         </div>
 
                         {/* RIGHT - IMAGE */}
-                        <div className="w-[578px] h-64 shrink-0">
+                        <div className="h-64 w-[min(578px,55vw)] max-w-full shrink-0">
                           <AnimatePresence mode="wait">
                             {hoveredItem?.image && (
                               <motion.img

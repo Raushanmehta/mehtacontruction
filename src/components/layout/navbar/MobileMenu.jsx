@@ -9,6 +9,7 @@ import {
   FaLinkedinIn,
   FaWhatsapp,
 } from "react-icons/fa";
+import { FiArrowUpRight } from "react-icons/fi";
 
 import { navLinks } from "./nav-links";
 import { Button } from "@/components/ui/button";
@@ -24,16 +25,16 @@ export default function MobileMenu() {
   return (
     <>
       {/* Menu Button */}
-      <Button
+      <button
         type="button"
         variant="ghost"
-        size="icon-lg"
+        size="icon-xl"
         onClick={() => setOpen(true)}
-        className="lg:hidden p-2"
+        className="lg:hidden "
         aria-label="Open menu"
       >
-        <Menu size={28} />
-      </Button>
+        <Menu size={24} />
+      </button>
       <AnimatePresence>
         {open && (
           <>
@@ -48,7 +49,7 @@ export default function MobileMenu() {
 
             {/* Sidebar */}
             <motion.div
-              className="fixed top-0 left-0 h-screen w-[85%] max-w-[350px] bg-white z-50 shadow-2xl overflow-y-auto"
+              className="fixed top-0 left-0 z-50 h-screen w-[85%] max-w-[350px] overflow-y-auto bg-white shadow-2xl [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
@@ -59,7 +60,7 @@ export default function MobileMenu() {
               }}
             >
               {/* Header */}
-              <div className="flex items-center justify-between px-5 py-5 border-b border-gray-200">
+              <div className="flex items-center justify-between px-4 py-4 border-b border-gray-200">
                 <img
                   src="/image/mehta-contruction-logo-blue.png"
                   alt="Mehta Construction"
@@ -71,7 +72,7 @@ export default function MobileMenu() {
                   onClick={() => setOpen(false)}
                     variant="ghost"
                     size="icon-lg"
-                    className="hover:text-[#FF6118]"
+                    className="hover:text-[#FF6118] rounded-full"
                     aria-label="Close menu"
                 >
                   <X size={28} />
@@ -79,7 +80,7 @@ export default function MobileMenu() {
               </div>
 
               {/* Navigation */}
-              <div className="px-6 py-5">
+              <div className="px-5 py-5">
                 {navLinks.map((item, index) => (
                   <motion.div
                     key={item.title}
@@ -95,7 +96,7 @@ export default function MobileMenu() {
                           onClick={() => toggleMenu(item.title)}
                           variant="ghost"
                           size="lg"
-                          className="h-auto w-full justify-between rounded-none px-0 py-4 text-left font-medium text-slate-700 hover:text-[#FF6118]"
+                          className="h-auto w-full justify-between rounded-none px-2 py-4 text-left font-medium text-black hover:text-[#FF6118]"
                         >
                           <span>{item.title}</span>
 
@@ -113,22 +114,25 @@ export default function MobileMenu() {
                               animate={{ height: "auto", opacity: 1 }}
                               exit={{ height: 0, opacity: 0 }}
                               transition={{ duration: 0.25 }}
-                              className="overflow-hidden pl-4 pb-3"
+                              className="overflow-hidden pb-3 "
                             >
                               {item.items.map((subItem) => (
                                 <Link
                                   key={subItem.title}
                                   to={subItem.href}
                                   onClick={() => setOpen(false)}
-                                  className="block py-3 border-l-2 border-[#FF6118] pl-4 hover:bg-slate-50 rounded-md transition"
+                                  className="group block rounded-md px-2 py-2 transition-colors hover:bg-slate-50"
                                 >
-                                  <h4 className="font-medium text-slate-700">
+                                  <h4 className="flex items-center justify-between gap-3 text-sm font-medium  text-black">
                                     {subItem.title}
+                                    <FiArrowUpRight className="shrink-0 text-base text-[#FF6118] transition-transform duration-300 ease-out group-hover:translate-x-1 group-hover:-translate-y-1" />
                                   </h4>
 
-                                  <p className="text-xs text-gray-500 mt-1">
-                                    {subItem.description}
-                                  </p>
+                                  {subItem.description && (
+                                    <p className="mt-1 text-xs text-gray-500">
+                                      {subItem.description}
+                                    </p>
+                                  )}
                                 </Link>
                               ))}
                             </motion.div>
@@ -139,7 +143,7 @@ export default function MobileMenu() {
                       <Link
                         to={item.href}
                         onClick={() => setOpen(false)}
-                        className="block py-4 font-medium text-slate-700 hover:text-[#FF6118] transition"
+                        className="block px-2 py-4 text-sm font-medium text-black transition hover:text-[#FF6118]"
                       >
                         {item.title}
                       </Link>
@@ -161,21 +165,9 @@ export default function MobileMenu() {
 
                 {/* Social Icons */}
 
-                <div className="flex justify-center mt-10">
-                  <a
-                    href="https://wa.me/919304137746"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <img
-                      src="https://www.webnx.in/wp-content/uploads/2022/03/whatsapp-min-1.png"
-                      alt="Whatsapp"
-                      className="w-40 hover:scale-105 transition duration-300"
-                    />
-                  </a>
-                </div>
+                
 
-                <div className="flex justify-center gap-5 text-2xl mt-10">
+                <div className="flex justify-center gap-5 text-2xl mt-6">
                   <a href="#" className="hover:text-[#FF6118] transition">
                     <FaFacebook />
                   </a>
@@ -204,12 +196,12 @@ export default function MobileMenu() {
 
                 {/* Footer */}
 
-                <div className="mt-10 border-t border-gray-200 pt-6 text-center">
-                  <h3 className="font-bold text-slate-800">
+                <div className="mt-6 border-t border-gray-200 pt-6 text-center">
+                  <h3 className="font-poppins font-semibold text-slate-800">
                     Mehta Construction Pvt. Ltd.
                   </h3>
 
-                  <p className="text-sm text-gray-500 mt-2">
+                  <p className="text-xs text-gray-500">
                     Building Dreams with Quality & Trust
                   </p>
                 </div>

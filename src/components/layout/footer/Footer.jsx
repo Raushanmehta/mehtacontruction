@@ -15,7 +15,7 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-400 py-6 px-3 sm:px-4 lg:px-8 xl:px-12">
+    <footer className="bg-black text-gray-400 py-6 px-4 sm:px-4 lg:px-8 xl:px-12">
       <div className="mx-auto w-full max-w-[1300px]">
         {/* ================= TOP SECTION ================= */}
         <div className="min-h-[72px] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 py-5 sm:py-0 border-b border-gray-800">
@@ -194,7 +194,7 @@ export default function Footer() {
               strokeWidth="2.2"
               className="font-black tracking-[0.08em] text-[230px] font-sans"
             >
-              MEHTACON
+              MEHTA
             </text>
           </svg>
         </motion.div>

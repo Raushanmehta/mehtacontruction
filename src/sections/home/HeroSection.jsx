@@ -2,7 +2,7 @@ import heroVideo from "../../assets/video/video.mp4";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-[calc(92vh-64px)] w-full overflow-hidden">
+    <section className="relative h-[calc(91vh-64px)] w-full overflow-hidden">
       <video
         src={heroVideo}
         className="absolute inset-0 h-full w-full object-cover"

@@ -83,7 +83,7 @@ export default function ProcessSection() {
   return (
     <div className="w-full font-sans antialiased">
       <div className="bg-white">
-        <div className="mx-auto max-w-[1365px] px-5 pt-14 pb-0 sm:px-8">
+        <div className="mx-auto max-w-[1365px] px-4 pt-14 pb-0 sm:px-8">
           {/* Heading */}
         <div className=" mb-6 lg:mb-8">
           <p className="mb-2 text-sm uppercase tracking-[3px] text-[#FF6118]">
@@ -96,23 +96,23 @@ export default function ProcessSection() {
         </div>
 
           {/* Stepper Navigation */}
-          <div className="grid grid-cols-5 gap-0 ">
+          <div className="grid grid-cols-5 gap-0 cursor-pointer">
             {steps.map((item, index) => {
               const isActive = current === index;
               return (
-                <Button
+                <button
                   type="button"
                   variant="ghost"
                   size="lg"
                   key={item.step}
                   onClick={() => api?.scrollTo(index)}
-                  className={`relative h-auto w-full justify-start rounded-none border-0 px-4 pt-3 pb-6 text-left transition-all ${
+                  className={`relative h-auto w-full justify-center rounded-none border-0 px-1 pt-3 pb-4 text-left transition-all sm:justify-start sm:px-4 sm:pb-6 ${
                     isActive
                       ? " bg-gradient-to-b from-white to-[#FF6118] "
                       : ""
                   }`}
                 >
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col items-center gap-3 sm:items-start">
                     <span
                       className={`inline-flex items-center justify-center w-7 h-7 rounded-full text-xs font-semibold ${
                         isActive
@@ -123,14 +123,14 @@ export default function ProcessSection() {
                       {item.step}
                     </span>
                     <span
-                      className={`text-sm font-semibold leading-snug ${
+                      className={`hidden text-sm font-semibold leading-snug sm:block ${
                         isActive ? "text-[#000000]" : "text-[#555555]"
                       }`}
                     >
                       {item.navTitle}
                     </span>
                   </div>
-                </Button>
+                </button>
               );
             })}
           </div>
@@ -139,7 +139,7 @@ export default function ProcessSection() {
 
       {/* Carousel Body Section */}
       <div className="w-full bg-gradient-to-b from-[#FF6118] to-white">
-        <div className="mx-auto max-w-[1300px] px-5 py-16 sm:px-8">
+        <div className="mx-auto max-w-[1300px] px-4 py-16 sm:px-8">
           <Carousel setApi={setApi} className="w-full">
             <CarouselContent>
               {steps.map((item) => (

@@ -119,13 +119,13 @@ const CHIP_WHITE = `${CHIP} bg-white shadow-[0_1px_6px_rgba(16,24,40,0.07)]`;
 /* ------------------------------------------------------------------ */
 export default function AboutSection() {
   return (
-    <section className="relative bg-white py-14 sm:py-16 lg:py-14  md:px-16">
+    <section className="relative bg-white py-8 sm:py-10 lg:py-14  ">
         <style>{`@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");`}</style>
 
         {/* Soft orange wash: strongest bottom-left, fading out towards the photo */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(to_bottom,rgba(255,97,24,0)_0%,#fff1e8_100%)] [-webkit-mask-image:linear-gradient(to_right,#000_25%,transparent_55%)] [mask-image:linear-gradient(to_right,#000_25%,transparent_55%)]" />
 
-        <div className="mx-auto grid max-w-5xl items-start gap-12  lg:grid-cols-[508fr_516fr] lg:gap-0 max-w-[1350px] px-6">
+        <div className="mx-auto grid max-w-5xl items-start gap-12  lg:grid-cols-[508fr_516fr] lg:gap-0 max-w-[1350px] px-4 sm:px-4 md:px-10 lg:px-4">
           {/* ---------------- Copy ---------------- */}
           <div className="pt-0.5 space-y-3">
             <p className="mb-2 text-sm uppercase tracking-[3px] text-[#FF6118]">

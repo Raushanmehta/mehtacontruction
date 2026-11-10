@@ -51,7 +51,11 @@ function Button({
   return (
     <ButtonPrimitive
       data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={cn(
+        buttonVariants({ variant, size }),
+        className,
+        "hover:bg-black hover:bg-none hover:border-[#FF6118] hover:text-white",
+      )}
       {...props} />
   );
 }

@@ -63,8 +63,8 @@ const services = [
 
 export default function ServiceSection() {
   return (
-    <section className="relative bg-white py-14 sm:py-16 lg:py-14 md:px-16">
-      <div className="relative mx-auto max-w-[1350px] px-6">
+    <section className="relative bg-white py-8 sm:py-10 lg:py-14">
+      <div className="relative mx-auto max-w-[1350px]  px-4 sm:px-4 md:px-10 lg:px-4">
 
         {/* Heading */}
         <div className="text-center mb-6 lg:mb-8">

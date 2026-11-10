@@ -15,7 +15,7 @@ export const navLinks = [
     ],
     serviceGroups: [
       {
-        title: "Software Development",
+        title: "Development",
         href: "/services/software-development",
         items: [
           "IT Consulting",
@@ -43,7 +43,7 @@ export const navLinks = [
         ],
       },
       {
-        title: "Mobile App Development",
+        title: "App Development",
         href: "/services/mobile-app",
         items: [
           "iOS App",
@@ -159,7 +159,7 @@ export const navLinks = [
     columns: 1,
     items: [
       {
-        title: "Career Opportunities",
+        title: "Careers",
         href: "/careers/frontend",
         image: "/images/careers/frontend.jpg",
       },

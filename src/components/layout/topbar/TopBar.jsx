@@ -12,8 +12,8 @@ export default function TopBar() {
   };
 
   return (
-    <section className="relative bg-black py-3">
-      <div className="mx-auto flex max-w-[1350px] items-center justify-end gap-4 px-4 sm:px-6 lg:px-6">
+    <section className="relative bg-black py-2">
+      <div className="mx-auto flex max-w-[1350px] items-center justify-end gap-4 px-4 ">
         
 
         <div className="flex min-w-0 items-center justify-end gap-2 text-xs font-semibold uppercase tracking-[0.08em] text-white sm:text-xs">
